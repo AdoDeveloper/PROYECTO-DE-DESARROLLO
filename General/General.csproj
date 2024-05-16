@@ -44,20 +44,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Roles.cs" />
-    <Compile Include="GUI\RolesEdicion.cs">
+    <Compile Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\RolesEdicion.Designer.cs">
+    <Compile Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.Designer.cs">
+      <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GESTION_ROLES_PERMISOS\RolesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_ROLES_PERMISOS\RolesEdicion.Designer.cs">
       <DependentUpon>RolesEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\RolesGestion.cs">
+    <Compile Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\RolesGestion.Designer.cs">
+    <Compile Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.Designer.cs">
       <DependentUpon>RolesGestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -69,11 +81,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\RolesEdicion.resx">
+    <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.resx">
+      <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\RolesEdicion.resx">
       <DependentUpon>RolesEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\RolesGestion.resx">
+    <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

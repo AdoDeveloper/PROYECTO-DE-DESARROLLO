@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using General.CLS;
 
 namespace SesionManager
 {
@@ -14,10 +15,15 @@ namespace SesionManager
         private static readonly object _lock = new object();
 
         String _Usuario;
+        String _IDRol;
+        
+        
 
 
 
         public string Usuario { get => _Usuario; set => _Usuario = value; }
+        public string IDRol { get => _IDRol; set => _IDRol = value; }
+
 
         public static Sesion ObtenerInstancia()
         {
@@ -66,6 +72,39 @@ namespace SesionManager
             }
 
             return result;
+        }
+
+        public List<Opciones> ObtenerOpciones()
+        {
+            List<Opciones> lstOpciones = new List<Opciones>();
+            String Sentencia = "select o.* \r\nfrom opciones o \r\ninner join permisos p on p.IDOpcion  = o.IDOpcion and p.IDRol = " + IDRol + " where IDPadre is null";
+            DataTable Resultado = new DataTable();
+
+            try
+            {
+                DataLayer.DBOperacion operacion = new DataLayer.DBOperacion();
+                Resultado = operacion.Consultar(Sentencia);
+
+                if (Resultado.Rows.Count > 0)
+                {
+                    for (int i = 0; i < Resultado.Rows.Count; i++)
+                    {
+                        lstOpciones.Add(new Opciones(
+
+                           Convert.ToInt32(Resultado.Rows[i]["IDOpcion"]),
+                           Convert.ToString(Resultado.Rows[i]["Opcion"]),
+                           Convert.ToInt32(Resultado.Rows[i]["IDPadre"].Equals(null) ? Resultado.Rows[i]["IDPadre"] : 0)
+
+                         ));
+
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, "Hubo un error", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
+            }
+            return lstOpciones;
         }
     }
     

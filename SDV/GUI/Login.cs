@@ -52,6 +52,7 @@ namespace SDV.GUI
                 {
                     SesionManager.Sesion oSesion = SesionManager.Sesion.ObtenerInstancia();
                     oSesion.Usuario = txbUsuario.Text;
+                    oSesion.IDRol = dt.Rows[0]["IDRol"].ToString();
                     _Autorizado = true;
                     this.Close();
                 }

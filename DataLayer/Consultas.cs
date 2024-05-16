@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.MODELOS;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -30,6 +31,80 @@ namespace DataLayer
 
             return Resultado;
         }
+
+        public static List<OpcionModel> OBTENER_TODAS_LAS_OPCIONES()
+        {
+            List<OpcionModel> lts = new List<OpcionModel>(); 
+
+            String Consulta = "select IDOpcion, Opcion from opciones;";
+
+            DBOperacion operacion = new DBOperacion();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+                
+                if (dt.Rows.Count > 0)
+                {
+                    for(int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        
+                        OpcionModel op = new OpcionModel();
+                        op.IDOpcion = Convert.ToInt32( dt.Rows[i]["IDOpcion"] );
+                        op.Opcion = Convert.ToString(dt.Rows[i]["Opcion"]);
+                        
+
+                        lts.Add(op);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return lts;
+        }
+
+        public static List<OpcionModel> OBTENER_OPCIONES_ROL(Int32 id)
+        {
+            List<OpcionModel> lts = new List<OpcionModel>();
+
+            String Consulta = "select op.IDOpcion, op.Opcion  from opciones op\r\ninner join permisos p on p.IDOpcion  = op.IDOpcion \r\nwhere p.IDRol = " + id ;
+
+            DBOperacion operacion = new DBOperacion();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+                Console.WriteLine(id);
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Console.WriteLine(dt.Rows[i]["Opcion"]);
+                        OpcionModel op = new OpcionModel();
+                        op.IDOpcion = Convert.ToInt32(dt.Rows[i]["IDOpcion"]);
+                        op.Opcion = Convert.ToString(dt.Rows[i]["Opcion"]);
+
+
+                        lts.Add(op);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return lts;
+        }
+
+
 
         public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
         {
