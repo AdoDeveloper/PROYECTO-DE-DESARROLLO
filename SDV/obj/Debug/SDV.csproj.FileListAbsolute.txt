@@ -46,6 +46,15 @@ C:\Users\gabri\Downloads\Sistema de Facturacion\SDV\bin\Debug\System.Numerics.Ve
 C:\Users\gabri\Downloads\Sistema de Facturacion\SDV\bin\Debug\SesionManager.dll
 C:\Users\gabri\Downloads\Sistema de Facturacion\SDV\bin\Debug\SesionManager.pdb
 C:\Users\gabri\Downloads\Sistema de Facturacion\SDV\obj\Debug\SDV.csproj.Up2Date
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.AssemblyReference.cache
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.Form1.resources
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.GUI.Login.resources
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.GUI.Principal.resources
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.GUI.Splash.resources
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.Properties.Resources.resources
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.Resource1.resources
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.GenerateResource.cache
+D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.CoreCompileInputs.cache
 D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\SDV.exe.config
 D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\SDV.exe
 D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\SDV.pdb
@@ -83,15 +92,6 @@ D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\K4os.Compression.LZ4.xml
 D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\System.IO.Pipelines.xml
 D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\K4os.Hash.xxHash.xml
 D:\PROYECTO-DE-DESARROLLO-\SDV\bin\Debug\System.Numerics.Vectors.xml
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.AssemblyReference.cache
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.Form1.resources
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.GUI.Login.resources
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.GUI.Principal.resources
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.GUI.Splash.resources
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.Properties.Resources.resources
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.Resource1.resources
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.GenerateResource.cache
-D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.CoreCompileInputs.cache
 D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.csproj.CopyComplete
 D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.exe
 D:\PROYECTO-DE-DESARROLLO-\SDV\obj\Debug\SDV.pdb

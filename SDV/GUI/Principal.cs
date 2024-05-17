@@ -1,4 +1,5 @@
-﻿using General.CLS;
+﻿using DataLayer.MODELOS;
+using General.CLS;
 using SDV.CLS;
 using SDV.Properties;
 using SesionManager;
@@ -54,9 +55,9 @@ namespace SDV.GUI
         public void generarOpciones()
         {
             Sesion oSesion = Sesion.ObtenerInstancia();
-            List<Opciones> ltsOpciones = oSesion.ObtenerOpciones();
+            List<OpcionModel> ltsOpciones = oSesion.ObtenerOpciones();
 
-            foreach (Opciones opcion in ltsOpciones)
+            foreach (OpcionModel opcion in ltsOpciones)
             {
                 ToolStripMenuItem item = new ToolStripMenuItem(opcion.Opcion);
                 item.Image = IconManager.obtenerIconPorOpcion(opcion.IDOpcion);

@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using General.CLS;
+using DataLayer.MODELOS;
+
 
 namespace SesionManager
 {
@@ -74,9 +75,9 @@ namespace SesionManager
             return result;
         }
 
-        public List<Opciones> ObtenerOpciones()
+        public List<OpcionModel> ObtenerOpciones()
         {
-            List<Opciones> lstOpciones = new List<Opciones>();
+            List<OpcionModel> lstOpciones = new List<OpcionModel>();
             String Sentencia = "select o.* \r\nfrom opciones o \r\ninner join permisos p on p.IDOpcion  = o.IDOpcion and p.IDRol = " + IDRol + " where IDPadre is null";
             DataTable Resultado = new DataTable();
 
@@ -89,11 +90,10 @@ namespace SesionManager
                 {
                     for (int i = 0; i < Resultado.Rows.Count; i++)
                     {
-                        lstOpciones.Add(new Opciones(
+                        lstOpciones.Add(new OpcionModel(
 
                            Convert.ToInt32(Resultado.Rows[i]["IDOpcion"]),
-                           Convert.ToString(Resultado.Rows[i]["Opcion"]),
-                           Convert.ToInt32(Resultado.Rows[i]["IDPadre"].Equals(null) ? Resultado.Rows[i]["IDPadre"] : 0)
+                           Convert.ToString(Resultado.Rows[i]["Opcion"])
 
                          ));
 

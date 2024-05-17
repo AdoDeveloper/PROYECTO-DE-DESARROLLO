@@ -50,10 +50,6 @@
       <Project>{97503e3f-0849-4b4d-ab57-d5105039a38e}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\General\General.csproj">
-      <Project>{6eea3706-77c8-4a91-86a8-59a0126747f5}</Project>
-      <Name>General</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

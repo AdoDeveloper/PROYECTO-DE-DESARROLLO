@@ -71,12 +71,12 @@ D:\PROYECTO-DE-DESARROLLO-\General\bin\Debug\System.IO.Pipelines.xml
 D:\PROYECTO-DE-DESARROLLO-\General\bin\Debug\K4os.Hash.xxHash.xml
 D:\PROYECTO-DE-DESARROLLO-\General\bin\Debug\System.Numerics.Vectors.xml
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.AssemblyReference.cache
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_ROLES_PERMISOS.GestionPermisos.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.RolesEdicion.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.RolesGestion.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.Properties.Resources.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.GenerateResource.cache
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.CoreCompileInputs.cache
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.CopyComplete
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.dll
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.pdb
-D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_ROLES_PERMISOS.GestionPermisos.resources
-D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.Properties.Resources.resources

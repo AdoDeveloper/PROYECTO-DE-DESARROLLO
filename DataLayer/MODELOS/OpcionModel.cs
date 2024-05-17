@@ -10,6 +10,7 @@ namespace DataLayer.MODELOS
     {
         Int32 _IDOpcion;
         String _Opcion;
+
         
 
         public OpcionModel(int iDOpcion, string opcion)

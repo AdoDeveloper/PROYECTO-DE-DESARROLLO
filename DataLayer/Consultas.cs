@@ -104,6 +104,36 @@ namespace DataLayer
             return lts;
         }
 
+        public static void AGREGAR_OPCION_ROL(Int32 rol, Int32 opc)
+        {
+            try
+            {
+                
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "INSERT INTO permisos(IDRol,IDOpcion) values ("+rol+", "+opc+")";
+                operacion.EjecutarSetencia(consulta);
+
+            }catch(Exception e)
+            {
+               
+            }
+        }
+
+        public static void ELIMINAR_OPCION_ROL(Int32 rol, Int32 opc)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM permisos WHERE IDRol = " + rol + "  and IDOpcion = " + opc;
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
 
 
         public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
