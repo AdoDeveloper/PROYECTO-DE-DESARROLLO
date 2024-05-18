@@ -18,6 +18,20 @@ namespace SDV.CLS
                     return Resource1.ventas;
                 case 9:
                     return Resource1.rolespermisos;
+                case 11:
+                    return Resource1.maintain;
+                case 16:
+                    return Resource1.proveedor;
+                case 12:
+                    return Resource1.productos;
+                case 6:
+                    return Resource1.buscarproducto;
+                case 7:
+                    return Resource1.factura;
+                case 8:
+                    return Resource1.makeventas;
+                case 20:
+                    return Resource1.empleados;
                 default:
                     return null;
             }

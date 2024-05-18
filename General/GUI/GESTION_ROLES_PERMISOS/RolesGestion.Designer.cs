@@ -52,10 +52,10 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.btnEditar,
             this.btnEliminar,
             this.toolStripSeparator1,
-            this.btnEditar,
-            this.toolStripButton1,
             this.btnPermisos,
             this.txbFiltro,
             this.toolStripLabel1});
@@ -189,9 +189,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RolesGestion";
-            this.Text = "RolesGestion";
+            this.Text = "ROLES Y PERMISOS";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

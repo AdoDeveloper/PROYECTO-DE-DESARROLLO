@@ -60,9 +60,31 @@ namespace SDV.GUI
             foreach (OpcionModel opcion in ltsOpciones)
             {
                 ToolStripMenuItem item = new ToolStripMenuItem(opcion.Opcion);
-                item.Image = IconManager.obtenerIconPorOpcion(opcion.IDOpcion);
-                item.Click  += (sender, e) => MenuItem_Click(sender, e, opcion.IDOpcion);
-                generalToolStripMenuItem.DropDownItems.Add(item);
+                if (opcion.IDPadre == -1)
+                {
+                    item.Image = IconManager.obtenerIconPorOpcion(opcion.IDOpcion);
+                    item.Click += (sender, e) => MenuItem_Click(sender, e, opcion.IDOpcion);
+                    if (opcion.Submenu == 1)
+                    {
+
+                        foreach (OpcionModel sub in opcion.SubOpciones)
+                        {
+                            ToolStripMenuItem item2 = new ToolStripMenuItem(sub.Opcion);
+                            item2.Image = IconManager.obtenerIconPorOpcion(sub.IDOpcion);
+                            item2.Click += (sender, e) => MenuItem_Click(sender, e, sub.IDOpcion);
+                            item.DropDownItems.Add(item2);  
+
+                        }
+
+                    }
+
+                    MainMenuStrip.Items.Add(item);
+
+                }
+                
+                
+
+                
             }
         }
 

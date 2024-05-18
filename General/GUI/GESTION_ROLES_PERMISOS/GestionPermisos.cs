@@ -27,7 +27,7 @@ namespace General.GUI.GESTION_ROLES_PERMISOS
 
         private void setRol(String rol, Int32 id)
         {
-            this.rolLabel.Text = rol;
+            this.rollabel2.Text = rol;
             this.IDRol = id;
         }
 
@@ -102,6 +102,11 @@ namespace General.GUI.GESTION_ROLES_PERMISOS
                 MessageBox.Show("El permiso se agrego correctamente");
                 obtenerOpcionesRol();
             }
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
