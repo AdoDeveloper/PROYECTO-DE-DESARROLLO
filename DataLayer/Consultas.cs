@@ -104,6 +104,46 @@ namespace DataLayer
             return lts;
         }
 
+        public static List<ProductoModel> OBTENER_PRODUCTOS()
+        {
+            List<ProductoModel> lts = new List<ProductoModel>();
+
+            String Consulta = "select * from productos";
+
+            DBOperacion operacion = new DBOperacion();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        
+                        ProductoModel op = new ProductoModel();
+                        op.Id_producto = Convert.ToInt32(dt.Rows[i]["id_producto"]);
+                        op.Producto = Convert.ToString(dt.Rows[i]["producto"]);
+                        op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
+                        op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
+                        op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
+                        
+
+                        lts.Add(op);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return lts;
+        }
+
+
         public static void AGREGAR_OPCION_ROL(Int32 rol, Int32 opc)
         {
             try
@@ -119,6 +159,8 @@ namespace DataLayer
             }
         }
 
+
+
         public static void ELIMINAR_OPCION_ROL(Int32 rol, Int32 opc)
         {
             try
@@ -126,6 +168,22 @@ namespace DataLayer
 
                 DBOperacion operacion = new DBOperacion();
                 String consulta = "DELETE FROM permisos WHERE IDRol = " + rol + "  and IDOpcion = " + opc;
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void AGREGAR_PRODUCTO(ProductoModel p)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "INSERT INTO productos(producto,precio,stock,descripcion, imagen) values ('"+p.Producto+"',"+p.Precio+", "+p.Stock+",'"+p.Descripcion+"', '"+p.Image+"')";
                 operacion.EjecutarSetencia(consulta);
 
             }

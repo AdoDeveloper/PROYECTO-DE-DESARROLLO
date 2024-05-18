@@ -100,7 +100,11 @@ namespace SDV.GUI
                     General.GUI.RolesGestion f = new General.GUI.RolesGestion();
                     f.ShowDialog();
                     break;
-                
+                case 12:
+                    // Abre la ventana de usuario
+                   General.GUI.PRODUCTOS.GestionProductos fd = new General.GUI.PRODUCTOS.GestionProductos();
+                    fd.ShowDialog();
+                    break;
                 default:
                     
                     break;

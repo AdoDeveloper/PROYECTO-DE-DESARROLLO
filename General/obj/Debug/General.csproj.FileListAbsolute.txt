@@ -80,3 +80,5 @@ D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.CoreCompileInputs.ca
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.CopyComplete
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.dll
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.pdb
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_PRODUCTOS.AgregarEditar.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.PRODUCTOS.GestionProductos.resources

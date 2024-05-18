@@ -97,6 +97,7 @@
     <Compile Include="DBConexion.cs" />
     <Compile Include="DBOperacion.cs" />
     <Compile Include="MODELOS\OpcionModel.cs" />
+    <Compile Include="MODELOS\ProductoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
