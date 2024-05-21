@@ -142,6 +142,43 @@ namespace DataLayer
             return lts;
         }
 
+        public static List<ClienteModel> OBTENER_CLIENTES()
+        {
+            List<ClienteModel> lts = new List<ClienteModel>();
+
+            String Consulta = "select * from clientes";
+
+            DBOperacion operacion = new DBOperacion();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+
+                        ClienteModel c = new ClienteModel();
+                        c.Id_cliente = Convert.ToInt32(dt.Rows[i]["id_cliente"]);
+                        c.Cliente = Convert.ToString(dt.Rows[i]["cliente"]);
+                        c.Telefono = Convert.ToString(dt.Rows[i]["telefono"]);
+                        c.Correo = Convert.ToString(dt.Rows[i]["correo"]);
+                        c.Dui = Convert.ToString(dt.Rows[i]["dui"]);
+                        lts.Add(c);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return lts;
+        }
+
         public static ProductoModel OBTENER_PRODUCTO(Int32 id)
         {
             
@@ -224,6 +261,48 @@ namespace DataLayer
                 String consulta = "INSERT INTO productos(producto,precio,stock,descripcion, imagen) values ('"+p.Producto+"',"+p.Precio+", "+p.Stock+",'"+p.Descripcion+"', @image)";
                 operacion.Comando.Parameters.AddWithValue("image", p.Image);
                 operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void AGREGAR_CLIENTE(ClienteModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "INSERT INTO clientes(cliente,telefono,correo,dui) values (@cliente,@telefono,@correo,@dui)";
+                operacion.Comando.Parameters.AddWithValue("cliente", c.Cliente);
+                operacion.Comando.Parameters.AddWithValue("telefono", c.Telefono);
+                operacion.Comando.Parameters.AddWithValue("correo", c.Correo);
+                operacion.Comando.Parameters.AddWithValue("dui", c.Dui);
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void EDITAR_CLIENTE(ClienteModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append(" UPDATE clientes ");
+                consulta.Append(" SET cliente =  '" + c.Cliente + "', ");
+                consulta.Append("  telefono =  '" + c.Telefono + "', ");
+                consulta.Append("  correo =  '" + c.Correo + "', ");
+                consulta.Append("  dui =  '" + c.Dui + "' ") ;
+                consulta.Append(" WHERE id_cliente =  " + c.Id_cliente);
+                operacion.EjecutarSetencia(consulta.ToString());
 
             }
             catch (Exception e)
