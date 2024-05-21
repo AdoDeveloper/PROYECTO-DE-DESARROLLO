@@ -21,10 +21,13 @@ namespace General.GUI.PRODUCTOS
             CargarProductos();
         }
 
+
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             AgregarEditar f = new AgregarEditar();
             f.UpdateDataGridView += FormNuevo_UpdateDataGridView;
+            f.setEditar(false);
             f.Show();
         }
 
@@ -38,6 +41,23 @@ namespace General.GUI.PRODUCTOS
         {
             List<ProductoModel> productoModels = Consultas.OBTENER_PRODUCTOS();
             dtgProductos.DataSource = productoModels;
+            if (dtgProductos.Columns["Image"] != null)
+            {
+                dtgProductos.Columns["Image"].Visible = false;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            AgregarEditar f = new AgregarEditar();
+            ProductoModel productoSeleccionado = (ProductoModel)dtgProductos.CurrentRow.DataBoundItem;
+
+            productoSeleccionado = Consultas.OBTENER_PRODUCTO(productoSeleccionado.Id_producto);
+
+            f.UpdateDataGridView += FormNuevo_UpdateDataGridView;
+            f.setEditar(true);
+            f.setProducto(productoSeleccionado);
+            f.Show();
         }
     }
 }

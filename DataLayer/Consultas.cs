@@ -127,8 +127,7 @@ namespace DataLayer
                         op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
                         op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
                         op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
-                        
-
+                        op.Image = (byte[])dt.Rows[i]["imagen"];
                         lts.Add(op);
                     }
 
@@ -141,6 +140,45 @@ namespace DataLayer
             }
 
             return lts;
+        }
+
+        public static ProductoModel OBTENER_PRODUCTO(Int32 id)
+        {
+            
+
+            String Consulta = "select * from productos where id_producto = " + id + " limit 1";
+
+            DBOperacion operacion = new DBOperacion();
+            ProductoModel op = new ProductoModel();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    int i = 0;
+
+                       
+                        op.Id_producto = Convert.ToInt32(dt.Rows[i]["id_producto"]);
+                        op.Producto = Convert.ToString(dt.Rows[i]["producto"]);
+                        op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
+                        op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
+                        op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
+                        op.Image = (byte[])dt.Rows[i]["imagen"];
+                        
+                    
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return op;
         }
 
 
@@ -183,8 +221,33 @@ namespace DataLayer
             {
 
                 DBOperacion operacion = new DBOperacion();
-                String consulta = "INSERT INTO productos(producto,precio,stock,descripcion, imagen) values ('"+p.Producto+"',"+p.Precio+", "+p.Stock+",'"+p.Descripcion+"', '"+p.Image+"')";
+                String consulta = "INSERT INTO productos(producto,precio,stock,descripcion, imagen) values ('"+p.Producto+"',"+p.Precio+", "+p.Stock+",'"+p.Descripcion+"', @image)";
+                operacion.Comando.Parameters.AddWithValue("image", p.Image);
                 operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void EDITAR_PRODUCTO(ProductoModel p)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append(" UPDATE productos ");
+                consulta.Append(" SET producto =  '" + p.Producto +"', ");
+                consulta.Append("  precio =  " + p.Precio + ", ");
+                consulta.Append("  stock =  " + p.Stock + ", ");
+                consulta.Append("  imagen =  @image, ");
+                consulta.Append("  descripcion =  '" + p.Descripcion + "' ");
+                consulta.Append(" WHERE id_producto =  " + p.Id_producto);
+                operacion.Comando.Parameters.AddWithValue("image", p.Image);
+                operacion.EjecutarSetencia(consulta.ToString());
 
             }
             catch (Exception e)

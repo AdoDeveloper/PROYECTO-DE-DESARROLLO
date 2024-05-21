@@ -10,11 +10,14 @@ namespace DataLayer
 {
     public class DBOperacion: DBConexion
     {
+
+        public MySqlCommand Comando = new MySqlCommand();
+
         public DataTable Consultar(String pConsulta)
         {
             DataTable Resultado = new DataTable();
             MySqlDataAdapter Adaptador = new MySqlDataAdapter();
-            MySqlCommand Comando = new MySqlCommand(); 
+            //MySqlCommand Comando = new MySqlCommand(); 
 
             try {
                 if (base.Conectar())
@@ -29,6 +32,7 @@ namespace DataLayer
             }
             catch(Exception ex) { 
                 Resultado = new DataTable();
+                
             }
             return Resultado;
         }
@@ -36,7 +40,7 @@ namespace DataLayer
         public Int32 EjecutarSetencia(String pSetencia)
         {
             Int32 FilasAfectadas = 0;
-            MySqlCommand Comando=new MySqlCommand();
+            //MySqlCommand Comando=new MySqlCommand();
 
             try
             {
@@ -48,9 +52,10 @@ namespace DataLayer
                     FilasAfectadas = Comando.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 FilasAfectadas = -1;
+                Console.WriteLine(e.Message);
             }
             return FilasAfectadas;
         }

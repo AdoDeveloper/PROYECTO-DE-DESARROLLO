@@ -32,6 +32,8 @@ namespace SDV.CLS
                     return Resource1.makeventas;
                 case 20:
                     return Resource1.empleados;
+                case 24:
+                    return Resource1.clientes;
                 default:
                     return null;
             }
