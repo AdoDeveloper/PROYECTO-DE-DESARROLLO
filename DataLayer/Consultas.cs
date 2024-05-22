@@ -31,6 +31,26 @@ namespace DataLayer
             return Resultado;
         }
 
+        public static DataTable EMPLEADOS()
+        {
+            DataTable Resultado = new DataTable();
+
+            String Consulta = @"SELECT IDEmpleado, Nombres, Apellidos FROM empleados ORDER BY Nombres ASC;";
+            DBOperacion operacion = new DBOperacion();
+
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                // Manejar la excepción si es necesario
+            }
+
+            return Resultado;
+        }
+
+
         public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
         {
             DataTable Resultado = new DataTable();
