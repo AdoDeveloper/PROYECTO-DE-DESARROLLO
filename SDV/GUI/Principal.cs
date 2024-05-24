@@ -43,24 +43,5 @@ namespace SDV.GUI
         {
             lblUsuario.Text = oSesion.Usuario;
         }
-
-        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (oSesion.ValidarPermiso(1))
-                {
-                    General.GUI.EmpleadosGestion f = new General.GUI.EmpleadosGestion();
-                    f.MdiParent = this;
-                    f.Show();
-                }
-
-            }
-            catch (Exception)
-            {
-
-
-            }
-        }
     }
 }
