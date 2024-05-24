@@ -1,4 +1,5 @@
-﻿using System;
+﻿using General.GUI.GESTION_ROLES_PERMISOS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,17 +65,7 @@ namespace General.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                RolesEdicion f = new RolesEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch (Exception)
-            {
 
-               
-            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -123,5 +114,21 @@ namespace General.GUI
             }
         }
 
+        private void btnPermisos_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow.Selected)
+            {
+                String rol = dataGridView1.CurrentRow.Cells["Rol"].Value.ToString();
+                Int32 id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IDRol"].Value.ToString());
+                GestionPermisos gp = new GestionPermisos(rol,id);
+                
+                gp.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un item");
+            }
+
+        }
     }
 }
