@@ -8,12 +8,12 @@ namespace DataLayer.MODELOS
 {
     public class EmpleadoModel
     {
-         Int32 _id_empleado;
-         String _nombres;
-         String _apellidos;
-         String _dui;
-         String _direccion;
-         String _telefono;
+        Int32 _id_empleado;
+        String _nombres;
+        String _apellidos;
+        String _dui;
+        String _direccion;
+        String _telefono;
 
         public int ID_Empleado { get => _id_empleado; set => _id_empleado = value; }
         public string Nombres { get => _nombres; set => _nombres = value; }

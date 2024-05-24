@@ -52,12 +52,15 @@
             // 
             // dtgEmpleados
             // 
+            this.dtgEmpleados.AllowUserToAddRows = false;
+            this.dtgEmpleados.AllowUserToDeleteRows = false;
             this.dtgEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgEmpleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dtgEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgEmpleados.Location = new System.Drawing.Point(0, 25);
             this.dtgEmpleados.Name = "dtgEmpleados";
+            this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgEmpleados.Size = new System.Drawing.Size(800, 403);
             this.dtgEmpleados.TabIndex = 2;
@@ -82,6 +85,6 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        public System.Windows.Forms.DataGridView dtgEmpleados;
+        private System.Windows.Forms.DataGridView dtgEmpleados;
     }
 }

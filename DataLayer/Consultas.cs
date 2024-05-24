@@ -142,6 +142,38 @@ namespace DataLayer
             return lts;
         }
 
+        public static List<EmpleadoModel> OBTENER_EMPLEADOS()
+        {
+            List<EmpleadoModel> listaEmpleados = new List<EmpleadoModel>();
+
+            string consulta = "SELECT IDEmpleado, Nombres, Apellidos, DUI, Direccion, Telefono FROM empleados;";
+            DBOperacion operacion = new DBOperacion(); // Asegúrate de tener esta clase definida para operaciones en la base de datos
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    EmpleadoModel empleado = new EmpleadoModel();
+                    empleado.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
+                    empleado.Nombres = Convert.ToString(row["Nombres"]);
+                    empleado.Apellidos = Convert.ToString(row["Apellidos"]);
+                    empleado.DUI = Convert.ToString(row["DUI"]);
+                    empleado.Direccion = Convert.ToString(row["Direccion"]);
+                    empleado.Telefono = Convert.ToString(row["Telefono"]);
+
+                    listaEmpleados.Add(empleado);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return listaEmpleados;
+        }
+
         public static ProductoModel OBTENER_PRODUCTO(Int32 id)
         {
             

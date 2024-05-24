@@ -19,11 +19,12 @@ namespace General.GUI.GESTION_EMPLEADOS
             InitializeComponent();
             CargarEmpleados();
         }
+
         public void CargarEmpleados()
         {
-            List<EmpleadoModel>  productoModels = Consultas.OBTENER_EMPLEADOS();
+            List<EmpleadoModel> productoModels = Consultas.OBTENER_EMPLEADOS();
             dtgEmpleados.DataSource = productoModels;
-           
+
         }
     }
 }
