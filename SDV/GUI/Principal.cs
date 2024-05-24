@@ -110,5 +110,24 @@ namespace SDV.GUI
                     break;
             }
         }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (oSesion.ValidarPermiso(1))
+                {
+                    General.GUI.GESTION_EMPLEADOS.GestionEmpleados f = new General.GUI.GESTION_EMPLEADOS.GestionEmpleados();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
     }
 }
