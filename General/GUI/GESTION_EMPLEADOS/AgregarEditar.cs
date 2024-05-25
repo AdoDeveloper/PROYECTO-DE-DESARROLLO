@@ -59,15 +59,22 @@ namespace General.GUI.GESTION_EMPLEADOS
             try
             {
                 MemoryStream ms = new MemoryStream();
-                
+
                 newEmpleado.Nombres = txbNombres.Text;
                 newEmpleado.Apellidos = txbApellidos.Text;
                 newEmpleado.DUI = txbDUI.Text;
                 newEmpleado.Direccion = txbDireccion.Text;
                 newEmpleado.Telefono = txbTelefono.Text;
-                
+
+                // Validar el DUI antes de agregar el empleado
+                if (!Consultas.VALIDAR_DUI_EMPLEADO(newEmpleado))
+                {
+                    MessageBox.Show("El DUI ingresado ya existe para otro empleado. Por favor, ingresa un DUI único.");
+                    return;
+                }
+
                 Consultas.AGREGAR_EMPLEADO(newEmpleado);
-                MessageBox.Show("Se guardo el empleado correctamente");
+                MessageBox.Show("Se guardó el empleado correctamente");
                 UpdateDataGridView?.Invoke(this, EventArgs.Empty);
                 this.Close();
             }
@@ -76,6 +83,7 @@ namespace General.GUI.GESTION_EMPLEADOS
                 MessageBox.Show("Hubo un error al guardar el empleado");
             }
         }
+
 
         public void editarEmpleado()
         {
@@ -86,8 +94,16 @@ namespace General.GUI.GESTION_EMPLEADOS
                 newEmpleado.DUI = txbDUI.Text;
                 newEmpleado.Direccion = txbDireccion.Text;
                 newEmpleado.Telefono = txbTelefono.Text;
+
+                // Validar el DUI antes de editar el empleado
+                if (!Consultas.VALIDAR_DUI_EMPLEADO(newEmpleado))
+                {
+                    MessageBox.Show("El DUI ingresado ya existe para otro empleado. Por favor, ingresa un DUI único.");
+                    return;
+                }
+
                 Consultas.EDITAR_EMPLEADO(newEmpleado);
-                MessageBox.Show("Se guardo el empleado correctamente");
+                MessageBox.Show("Se guardó el empleado correctamente");
                 UpdateDataGridView?.Invoke(this, EventArgs.Empty);
                 this.Close();
             }
@@ -96,6 +112,7 @@ namespace General.GUI.GESTION_EMPLEADOS
                 MessageBox.Show("Hubo un error al guardar el empleado");
             }
         }
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
