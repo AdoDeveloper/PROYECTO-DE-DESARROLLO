@@ -144,6 +144,8 @@ namespace General.GUI.VENTAS
 
         }
 
+   
+
         private void ActualizarSubtotales()
         {
             double total = 0;
@@ -158,6 +160,61 @@ namespace General.GUI.VENTAS
                 }
             }
             txbTotal.Text = total.ToString();
+        }
+
+        private void onRecibidoEnter(object sender, KeyEventArgs e)
+        {
+            // Verifica si la tecla presionada es Enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    // Intentar convertir los textos a double
+                    double total = Convert.ToDouble(txbTotal.Text);
+                    double recibido = Convert.ToDouble(txbRecibido.Text);
+
+                    // Calcular el cambio
+                    double cambio = recibido - total;
+
+                    // Mostrar el resultado en el textbox de cambio
+                    txbCanbio.Text = cambio.ToString("F2"); // "F2" para formato con 2 decimales
+                }
+                catch (FormatException)
+                {
+                    // Mostrar mensaje de error si las conversiones fallan
+                    MessageBox.Show("Por favor, ingrese valores numéricos válidos en los campos Total y Recibido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnProcesar_Click(object sender, EventArgs e)
+        {
+            validacionesProcesar();
+        }
+
+        private void validacionesProcesar()
+        {
+            if (ltsSeleccionados.Count == 0)
+            {
+                MessageBox.Show("Sin productos! Debe agregar productos");
+                return;
+            }
+
+            if (txbRecibido.Text.Equals(""))
+            {
+                MessageBox.Show("Debe de digitar el importe recibido");
+                return;
+            }
+            if (txbNomCliente.Text.Equals(""))
+            {
+                MessageBox.Show("Debe seleccionar un cliente");
+                return;
+            }
+            if (txbVendedor.Text.Equals(""))
+            {
+                MessageBox.Show("Debe de digitar el No expediente del vendedor");
+                return;
+            }
         }
     }
 }

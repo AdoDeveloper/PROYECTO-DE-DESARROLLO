@@ -210,6 +210,7 @@
             this.txbRecibido.Name = "txbRecibido";
             this.txbRecibido.Size = new System.Drawing.Size(291, 20);
             this.txbRecibido.TabIndex = 23;
+            this.txbRecibido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.onRecibidoEnter);
             // 
             // txbCanbio
             // 
@@ -238,6 +239,7 @@
             this.btnProcesar.TabIndex = 27;
             this.btnProcesar.Text = "PROCESAR";
             this.btnProcesar.UseVisualStyleBackColor = true;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
             // btnCancelar
             // 
