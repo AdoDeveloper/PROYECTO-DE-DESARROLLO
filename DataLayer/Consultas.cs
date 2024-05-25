@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -327,6 +328,88 @@ namespace DataLayer
 
             }
         }
+
+        public static FacturaModel OBTENER_FACTURA_POR_No(String NoFac)
+        {
+
+
+            String Consulta = "select * from facturas where no_factura = '" + NoFac + "' limit 1";
+
+            DBOperacion operacion = new DBOperacion();
+            FacturaModel op = new FacturaModel();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    int i = 0;
+
+
+                    op.Id_factura = Convert.ToInt32(dt.Rows[i]["id_factura"]);
+                    op.Total = Convert.ToDouble(dt.Rows[i]["total"]);
+                    op.Fecha = Convert.ToString(dt.Rows[i]["fecha"]);
+                    op.Id_cliente = Convert.ToInt32(dt.Rows[i]["id_cliente"]);
+
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return op;
+        }
+
+        public static void CREAR_FACTURA(FacturaModel factura)
+        {
+            try
+            {
+                // Insertando factura
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO facturas(total,no_factura,id_cliente) VALUES (@total,@nofa,@cliente)";
+                operacion.Comando.Parameters.AddWithValue("total", factura.Total);
+                operacion.Comando.Parameters.AddWithValue("nofa", factura.No_factura);
+                operacion.Comando.Parameters.AddWithValue("cliente", factura.Cliente.Id_cliente);
+                operacion.EjecutarSetencia(consulta);
+
+                // Obtenemos la factura creada
+                FacturaModel newFac = OBTENER_FACTURA_POR_No(factura.No_factura);
+
+                // Insertar los detalles
+                StringBuilder stringDetalles = new StringBuilder();
+                stringDetalles.Append("INSERT INTO detalles_factura(id_factura,id_producto,cantidad,precio_unitario,subtotal) VALUES ");
+
+                foreach (DetalleFacturaModel detalle in factura.Detalles)
+                {
+                    stringDetalles.AppendFormat("({0}, {1}, {2}, {3}, {4}), ",
+                        newFac.Id_factura, detalle.Id_producto, detalle.Cantidad, detalle.Precio_unitario, detalle.Subtotal);
+                }
+
+                // Remover la última coma y espacio
+                if (stringDetalles.Length > 0)
+                {
+                    stringDetalles.Remove(stringDetalles.Length - 2, 2); // Eliminar la última coma y espacio
+                }
+
+                string query = stringDetalles.ToString();
+                Console.WriteLine(query);
+
+                DBOperacion operacion2 = new DBOperacion();
+                operacion2.EjecutarSetencia(query);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al crear la factura", e);
+            }
+        }
+
+
+
 
         public static void EDITAR_CLIENTE(ClienteModel c)
         {

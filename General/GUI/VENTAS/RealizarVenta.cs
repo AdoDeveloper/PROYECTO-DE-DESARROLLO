@@ -1,5 +1,6 @@
 ﻿using DataLayer;
 using DataLayer.MODELOS;
+using General.CLS;
 using General.GUI.CLIENTES;
 using System;
 using System.Collections.Generic;
@@ -189,7 +190,40 @@ namespace General.GUI.VENTAS
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            validacionesProcesar();
+            try
+            {
+
+                List<DetalleFacturaModel> ltsDetalles = new List<DetalleFacturaModel>();
+                FacturaModel fact = new FacturaModel();
+
+                validacionesProcesar();
+
+                foreach (ProductoModel p in ltsSeleccionados)
+                {
+                    DetalleFacturaModel detalle = new DetalleFacturaModel();
+                    detalle.Precio_unitario = p.Precio;
+                    detalle.Id_producto = p.Id_producto;
+                    detalle.Cantidad = p.Stock;
+                    detalle.Subtotal = p.Precio * p.Stock;
+                    ltsDetalles.Add(detalle);
+                }
+
+                fact.No_factura = HashHelper.Generate(5);
+                fact.Total = Convert.ToDouble(txbTotal.Text);
+                fact.Cliente = cliente;
+                fact.Detalles = ltsDetalles;
+
+                Consultas.CREAR_FACTURA(fact);
+                MessageBox.Show("Se ha registro la venta exitosamente");
+                LimpiarFormulario();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+               
         }
 
         private void validacionesProcesar()
@@ -216,5 +250,31 @@ namespace General.GUI.VENTAS
                 return;
             }
         }
+
+        private void LimpiarFormulario()
+        {
+            // Limpiando objetos
+            cliente = new ClienteModel();
+            ltsBuscados = new List<ProductoModel>();
+            ltsSeleccionados = new BindingList<ProductoModel>();
+
+            // Limpiar todos los TextBox
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    (control as TextBox).Clear();
+                }
+                else if (control is ComboBox)
+                {
+                    (control as ComboBox).SelectedIndex = -1;
+                }
+                else if (control is DataGridView)
+                {
+                    (control as DataGridView).Rows.Clear();
+                }
+            }
+        }
+
     }
 }
