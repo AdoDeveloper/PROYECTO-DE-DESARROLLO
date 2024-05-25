@@ -108,11 +108,12 @@
             this.dtgProductos.AllowUserToDeleteRows = false;
             this.dtgProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Location = new System.Drawing.Point(0, 34);
+            this.dtgProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgProductos.Location = new System.Drawing.Point(0, 31);
             this.dtgProductos.MultiSelect = false;
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.ReadOnly = true;
-            this.dtgProductos.Size = new System.Drawing.Size(800, 400);
+            this.dtgProductos.Size = new System.Drawing.Size(800, 419);
             this.dtgProductos.TabIndex = 4;
             // 
             // GestionProductos
