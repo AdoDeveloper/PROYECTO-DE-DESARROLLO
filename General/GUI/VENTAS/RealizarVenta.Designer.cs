@@ -51,6 +51,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txbVendedor = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,7 +224,7 @@
             // txbNomCliente
             // 
             this.txbNomCliente.Enabled = false;
-            this.txbNomCliente.Location = new System.Drawing.Point(12, 400);
+            this.txbNomCliente.Location = new System.Drawing.Point(12, 429);
             this.txbNomCliente.Name = "txbNomCliente";
             this.txbNomCliente.ReadOnly = true;
             this.txbNomCliente.Size = new System.Drawing.Size(242, 20);
@@ -251,7 +252,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 485);
+            this.label11.Location = new System.Drawing.Point(12, 507);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(167, 16);
             this.label11.TabIndex = 29;
@@ -259,14 +260,14 @@
             // 
             // txbVendedor
             // 
-            this.txbVendedor.Location = new System.Drawing.Point(12, 508);
+            this.txbVendedor.Location = new System.Drawing.Point(12, 540);
             this.txbVendedor.Name = "txbVendedor";
             this.txbVendedor.Size = new System.Drawing.Size(242, 20);
             this.txbVendedor.TabIndex = 31;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 430);
+            this.button2.Location = new System.Drawing.Point(12, 464);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 33;
@@ -274,12 +275,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 404);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "NOMBRE:";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            // 
             // RealizarVenta
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 595);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txbVendedor);
             this.Controls.Add(this.label11);
@@ -336,5 +350,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txbVendedor;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
     }
 }

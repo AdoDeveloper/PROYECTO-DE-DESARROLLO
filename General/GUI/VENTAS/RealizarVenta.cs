@@ -19,11 +19,51 @@ namespace General.GUI.VENTAS
 
         List<ProductoModel> ltsBuscados = new List<ProductoModel>();
 
-        List<ProductoModel> ltsSeleccionados = new List<ProductoModel>();
+        private BindingList<ProductoModel> ltsSeleccionados = new BindingList<ProductoModel>();
 
         public RealizarVenta()
         {
             InitializeComponent();
+            confDataGridViewProductos();
+            txbCantidad.Text = "1";
+            
+        }
+
+        public void confDataGridViewProductos()
+        {
+            // Configura el DataGridView para usar BindingList
+            dtgProductos.DataSource = ltsSeleccionados;
+
+            // Ocultar la columna "Image"
+            if (dtgProductos.Columns["Image"] != null)
+            {
+                dtgProductos.Columns["Image"].Visible = false;
+            }
+
+            if (dtgProductos.Columns["Descripcion"] != null)
+            {
+                dtgProductos.Columns["Descripcion"].Visible = false;
+            }
+
+            // Cambiar el nombre de la columna "Stock" a "Cantidad"
+            if (dtgProductos.Columns["Stock"] != null)
+            {
+                dtgProductos.Columns["Stock"].HeaderText = "Cantidad";
+            }
+
+
+
+            // Agregar columna "Subtotal"
+            if (!dtgProductos.Columns.Contains("Subtotal"))
+            {
+                DataGridViewTextBoxColumn subtotalColumn = new DataGridViewTextBoxColumn
+                {
+                    Name = "Subtotal",
+                    HeaderText = "Subtotal",
+                    ReadOnly = true
+                };
+                dtgProductos.Columns.Add(subtotalColumn);
+            }
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -82,23 +122,42 @@ namespace General.GUI.VENTAS
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
             if (cmbProducto.SelectedItem != null && !cmbProducto.SelectedItem.ToString().Equals("Seleccionar"))
             {
                 Int32 id_producto = Convert.ToInt32(cmbProducto.SelectedItem.ToString().Split('-')[0]);
 
                 ProductoModel seleccionado = ltsBuscados.Find(element => element.Id_producto == id_producto);
-
+                seleccionado.Stock = Convert.ToInt32(txbCantidad.Text);
                 ltsSeleccionados.Add(seleccionado);
-
-                dtgProductos.DataSource = ltsSeleccionados;
-                dtgProductos.Columns["Image"].Visible = false;
-                dtgProductos.Refresh();
+                ActualizarSubtotales();
             }
             else
             {
                 MessageBox.Show("Debe buscar un producto");
             }
 
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ActualizarSubtotales()
+        {
+            double total = 0;
+            foreach (DataGridViewRow row in dtgProductos.Rows)
+            {
+                if (row.DataBoundItem is ProductoModel producto)
+                {
+                    // Suponiendo que la clase ProductoModel tiene una propiedad Precio
+                    double subtotal = producto.Precio * producto.Stock;
+                    total += subtotal;
+                    row.Cells["Subtotal"].Value = subtotal;
+                }
+            }
+            txbTotal.Text = total.ToString();
         }
     }
 }
