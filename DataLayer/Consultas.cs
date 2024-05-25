@@ -351,6 +351,37 @@ namespace DataLayer
             }
         }
 
+        public static bool VALIDAR_DUI_EMPLEADO(EmpleadoModel e)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "SELECT COUNT(*) FROM empleados WHERE DUI = '" + e.DUI + "' AND IDEmpleado != " + e.ID_Empleado;
+                DataTable dt = operacion.Consultar(consulta);
+
+                // Verificar si el resultado tiene al menos una fila
+                if (dt.Rows.Count > 0)
+                {
+                    // Obtener el valor del primer registro en la primera columna
+                    int count = Convert.ToInt32(dt.Rows[0][0]);
+
+                    // Si count es 0, significa que el DUI es válido
+                    return count == 0;
+                }
+                else
+                {
+                    // No se encontraron resultados, retornar false por precaución
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo un error al validar el DUI del empleado: " + ex.Message);
+                return false; // En caso de error, retorna false
+            }
+        }
+
+
         public static void EDITAR_EMPLEADO(EmpleadoModel e)
         {
             try
@@ -372,6 +403,8 @@ namespace DataLayer
                 Console.WriteLine(ex.Message);
             }
         }
+
+
 
         public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
         {

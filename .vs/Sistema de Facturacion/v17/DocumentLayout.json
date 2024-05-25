@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\modelos\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\modelos\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +31,8 @@
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_productos\\gestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_productos\\gestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_productos\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -73,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\modelos\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\modelos\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{544F1ADC-C9C3-4A45-B69A-188989BA3C02}|SesionManager\\SesionManager.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\sesionmanager\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,7 +127,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -147,32 +147,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AgregarEditar.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T00:08:16.2Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "GestionEmpleados.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
               "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
               "RelativeToolTip": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAQwDoAAAAiAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAqwBIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T04:49:12.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "GestionProductos.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\GestionProductos.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_PRODUCTOS\\GestionProductos.cs",
@@ -185,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "GestionEmpleados.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
@@ -197,20 +185,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AgregarEditar.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
               "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
               "RelativeToolTip": "General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAIAxwFwAAAANAAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAiwHIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T00:16:54.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "EmpleadoModel.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\EmpleadoModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\MODELOS\\EmpleadoModel.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\EmpleadoModel.cs",
+              "RelativeToolTip": "DataLayer\\MODELOS\\EmpleadoModel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T04:36:02.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Consultas.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Consultas.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
+              "RelativeToolTip": "DataLayer\\Consultas.cs",
+              "ViewState": "AQIAAF0BAAAAAAAAAAAqwHIBAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T03:08:34.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AgregarEditar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "General\\GUI\\GESTION_EMPLEADOS\\AgregarEditar.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T00:08:16.2Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GestionProductos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\GestionProductos.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_PRODUCTOS\\GestionProductos.cs",
@@ -222,20 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Consultas.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Consultas.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
-              "RelativeToolTip": "DataLayer\\Consultas.cs",
-              "ViewState": "AQIAABEBAAAAAAAAAAAAACMBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:08:34.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AgregarEditar.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
@@ -247,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AgregarEditar.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
@@ -260,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "app.config",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\app.config",
               "RelativeDocumentMoniker": "General\\app.config",
@@ -273,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DBConexion.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\DBConexion.cs",
               "RelativeDocumentMoniker": "DataLayer\\DBConexion.cs",
@@ -286,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Principal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
               "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
@@ -298,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GestionEmpleados.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.Designer.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.Designer.cs",
@@ -311,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "General\\Properties\\AssemblyInfo.cs",
@@ -324,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "General\\Properties\\Resources.resx",
@@ -336,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Principal.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
               "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
@@ -349,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Opciones.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\CLS\\Opciones.cs",
               "RelativeDocumentMoniker": "General\\CLS\\Opciones.cs",
@@ -358,19 +371,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T04:44:59.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EmpleadoModel.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\EmpleadoModel.cs",
-              "RelativeDocumentMoniker": "DataLayer\\MODELOS\\EmpleadoModel.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\EmpleadoModel.cs",
-              "RelativeToolTip": "DataLayer\\MODELOS\\EmpleadoModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T04:36:02.039Z",
               "EditorCaption": ""
             },
             {
@@ -386,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Roles.cs",
               "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\CLS\\Roles.cs",
               "RelativeDocumentMoniker": "General\\CLS\\Roles.cs",
