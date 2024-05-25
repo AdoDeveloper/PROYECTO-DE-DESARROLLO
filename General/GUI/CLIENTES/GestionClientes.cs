@@ -14,9 +14,17 @@ namespace General.GUI.CLIENTES
 {
     public partial class GestionClientes : Form
     {
+        public delegate void setClienteOnVentaEventHandler(object sender, EventArgs e, ClienteModel c);
+
+
+        public event setClienteOnVentaEventHandler setClienteOnVenta;
+
+        
+
         public GestionClientes()
         {
             InitializeComponent();
+            btnSeleccionar.Visible = false;
             CargarClientes();
         }
 
@@ -48,6 +56,22 @@ namespace General.GUI.CLIENTES
             f.setCliente(clienteSeleccionado);
             f.setEditar(true);
             f.ShowDialog();
+        }
+
+        public void isFormOpenOnVenta(bool open)
+        {
+            if(open)
+            {
+                btnSeleccionar.Visible = true;
+            }
+            
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            ClienteModel clienteSeleccionado = (ClienteModel)dtgClientes.CurrentRow.DataBoundItem;
+            setClienteOnVenta?.Invoke(this, EventArgs.Empty, clienteSeleccionado);
+            this.Close();
         }
     }
 }

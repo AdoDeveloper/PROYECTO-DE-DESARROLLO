@@ -218,6 +218,45 @@ namespace DataLayer
             return op;
         }
 
+        public static List<ProductoModel> BUSCAR_PRODUCTOS(String nombre)
+        {
+
+
+            String Consulta = "select * from productos where LOWER(producto) like '%" + nombre + "%'";
+
+            DBOperacion operacion = new DBOperacion();
+            List<ProductoModel> lts = new List<ProductoModel>();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    for(int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        ProductoModel op = new ProductoModel();
+                        op.Id_producto = Convert.ToInt32(dt.Rows[i]["id_producto"]);
+                        op.Producto = Convert.ToString(dt.Rows[i]["producto"]);
+                        op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
+                        op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
+                        op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
+                        op.Image = (byte[])dt.Rows[i]["imagen"];
+                        lts.Add(op);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return lts;
+        }
+
 
         public static void AGREGAR_OPCION_ROL(Int32 rol, Int32 opc)
         {

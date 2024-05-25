@@ -84,3 +84,4 @@ D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_PRODUCTOS.Agreg
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.PRODUCTOS.GestionProductos.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.AgregarEditar.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.GestionClientes.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.VENTAS.RealizarVenta.resources

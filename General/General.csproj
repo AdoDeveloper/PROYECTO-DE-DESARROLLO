@@ -88,6 +88,18 @@
     <Compile Include="GUI\GESTION_PRODUCTOS\GestionProductos.Designer.cs">
       <DependentUpon>GestionProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VENTAS\RealizarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VENTAS\RealizarVenta.Designer.cs">
+      <DependentUpon>RealizarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VENTAS\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VENTAS\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -119,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VENTAS\RealizarVenta.resx">
+      <DependentUpon>RealizarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

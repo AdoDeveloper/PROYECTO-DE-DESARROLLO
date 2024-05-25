@@ -92,8 +92,9 @@ namespace SDV.GUI
         {
             switch (IDOpcion)
             {
-                case 5:
-
+                case 8:
+                    General.GUI.VENTAS.RealizarVenta v = new General.GUI.VENTAS.RealizarVenta();
+                    v.ShowDialog();
                     break;
                 case 9:
                     

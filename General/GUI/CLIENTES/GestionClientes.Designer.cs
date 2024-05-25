@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionClientes));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             this.SuspendLayout();
@@ -45,9 +46,10 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.btnAgregar,
             this.btnEditar,
-            this.btnEliminar,
+            this.toolStripButton1,
+            this.btnSeleccionar,
             this.toolStripSeparator1,
             this.txbFiltro,
             this.toolStripLabel1});
@@ -57,14 +59,14 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnAgregar
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(77, 28);
-            this.toolStripButton1.Text = "Agregar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(77, 28);
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // btnEditar
             // 
@@ -75,13 +77,14 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnEliminar
+            // btnSeleccionar
             // 
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(78, 28);
-            this.btnEliminar.Text = "Eliminar";
+            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(95, 28);
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -115,6 +118,14 @@
             this.dtgClientes.Size = new System.Drawing.Size(800, 400);
             this.dtgClientes.TabIndex = 5;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(78, 28);
+            this.toolStripButton1.Text = "Eliminar";
+            // 
             // GestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,12 +146,13 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnAgregar;
         private System.Windows.Forms.ToolStripButton btnEditar;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.DataGridView dtgClientes;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
