@@ -46,6 +46,12 @@
     <Compile Include="Class1.cs" />
     <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="GUI\GESTION_EMPLEADOS\AgregarEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_EMPLEADOS\AgregarEditar.Designer.cs">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GESTION_EMPLEADOS\GestionEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\GESTION_EMPLEADOS\AgregarEditar.resx">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_EMPLEADOS\GestionEmpleados.resx">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
     </EmbeddedResource>

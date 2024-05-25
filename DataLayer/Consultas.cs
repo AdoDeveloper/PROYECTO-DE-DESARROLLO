@@ -213,6 +213,37 @@ namespace DataLayer
             return op;
         }
 
+        public static EmpleadoModel OBTENER_EMPLEADO(Int32 id)
+        {
+            String consulta = "SELECT * FROM empleados WHERE IDEmpleado = " + id + " LIMIT 1";
+
+            DBOperacion operacion = new DBOperacion();
+            EmpleadoModel empleado = new EmpleadoModel();
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    int i = 0;
+
+                    empleado.ID_Empleado = Convert.ToInt32(dt.Rows[i]["IDEmpleado"]);
+                    empleado.Nombres = Convert.ToString(dt.Rows[i]["Nombres"]);
+                    empleado.Apellidos = Convert.ToString(dt.Rows[i]["Apellidos"]);
+                    empleado.DUI = Convert.ToString(dt.Rows[i]["DUI"]);
+                    empleado.Direccion = Convert.ToString(dt.Rows[i]["Direccion"]);
+                    empleado.Telefono = Convert.ToString(dt.Rows[i]["Telefono"]);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return empleado;
+        }
+
 
         public static void AGREGAR_OPCION_ROL(Int32 rol, Int32 opc)
         {
@@ -247,6 +278,21 @@ namespace DataLayer
             }
         }
 
+        public static void ELIMINAR_EMPLEADO(Int32 id)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM empleados WHERE IDEmpleado = " + id;
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
         public static void AGREGAR_PRODUCTO(ProductoModel p)
         {
             try
@@ -261,6 +307,23 @@ namespace DataLayer
             catch (Exception e)
             {
 
+            }
+        }
+
+        public static void AGREGAR_EMPLEADO(EmpleadoModel e)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO empleados(Nombres, Apellidos, DUI, Direccion, Telefono) " +
+                                  "VALUES ('" + e.Nombres + "', '" + e.Apellidos + "', '" + e.DUI + "', '" + e.Direccion + "', '" + e.Telefono + "')";
+
+                // Asegúrate de abrir la conexión antes de ejecutar la sentencia
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -288,6 +351,27 @@ namespace DataLayer
             }
         }
 
+        public static void EDITAR_EMPLEADO(EmpleadoModel e)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append("UPDATE empleados ");
+                consulta.Append("SET Nombres = '" + e.Nombres + "', ");
+                consulta.Append("Apellidos = '" + e.Apellidos + "', ");
+                consulta.Append("DUI = '" + e.DUI + "', ");
+                consulta.Append("Direccion = '" + e.Direccion + "', ");
+                consulta.Append("Telefono = '" + e.Telefono + "' ");
+                consulta.Append("WHERE IDEmpleado = " + e.ID_Empleado);
+
+                operacion.EjecutarSetencia(consulta.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
 
         public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
         {
