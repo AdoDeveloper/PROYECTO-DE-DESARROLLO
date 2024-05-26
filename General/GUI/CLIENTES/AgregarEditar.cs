@@ -63,6 +63,11 @@ namespace General.GUI.CLIENTES
         {
             try
             {
+                if (!Validaciones())
+                {
+                    
+                    return;
+                }
                 newCliente.Cliente = txbNombre.Text;
                 newCliente.Telefono = txbTelefono.Text;
                 newCliente.Correo = txbCorreo.Text;
@@ -82,6 +87,11 @@ namespace General.GUI.CLIENTES
         {
             try
             {
+                if (!Validaciones())
+                {
+                    
+                    return;
+                }
                 newCliente.Cliente = txbNombre.Text;
                 newCliente.Telefono = txbTelefono.Text;
                 newCliente.Correo = txbCorreo.Text;
@@ -96,6 +106,32 @@ namespace General.GUI.CLIENTES
                 MessageBox.Show("Hubo un error al guardar\n" + ex.Message);
             }
         }
+
+        private bool Validaciones()
+        {
+            if (string.IsNullOrEmpty(txbNombre.Text))
+            {
+                MessageBox.Show("Debe de digitar el nombre del cliente");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txbTelefono.Text))
+            {
+                MessageBox.Show("Debe digitar un teléfono");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txbCorreo.Text))
+            {
+                MessageBox.Show("Debe de digitar el correo");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txbDUI.Text))
+            {
+                MessageBox.Show("Debe de digitar el documento de identidad");
+                return false;
+            }
+            return true;
+        }
+
 
 
         public void setEditar(bool edit)
