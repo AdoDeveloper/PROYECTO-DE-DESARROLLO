@@ -128,7 +128,7 @@ namespace General.GUI.VENTAS
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+
             if (cmbProducto.SelectedItem != null && !cmbProducto.SelectedItem.ToString().Equals("Seleccionar"))
             {
                 Int32 id_producto = Convert.ToInt32(cmbProducto.SelectedItem.ToString().Split('-')[0]);
@@ -139,13 +139,14 @@ namespace General.GUI.VENTAS
 
                 if (exists.Any())
                 {
-                    MessageBox.Show("El producto ya se agrego a la lista");
+                    MessageBox.Show("El producto ya se agregó a la lista");
                     return;
                 }
 
                 seleccionado.Stock = Convert.ToInt32(txbCantidad.Text);
                 ltsSeleccionados.Add(seleccionado);
                 ActualizarSubtotales();
+                MostrarMensaje("¡Actualizar cambio!", Color.Red);
             }
             else
             {
@@ -202,6 +203,7 @@ namespace General.GUI.VENTAS
 
                         // Mostrar el resultado en el textbox de cambio
                         txbCanbio.Text = cambio.ToString("F2"); // "F2" para formato con 2 decimales
+                        MostrarMensaje("Cambio actualizado.", Color.Green);
                     }
                 }
                 catch (FormatException)
@@ -219,19 +221,23 @@ namespace General.GUI.VENTAS
         {
             try
             {
+                if (!validacionesProcesar())
+                {
+                    return; // Detener el proceso si alguna validación falla
+                }
 
                 List<DetalleFacturaModel> ltsDetalles = new List<DetalleFacturaModel>();
                 FacturaModel fact = new FacturaModel();
 
-                validacionesProcesar();
-
                 foreach (ProductoModel p in ltsSeleccionados)
                 {
-                    DetalleFacturaModel detalle = new DetalleFacturaModel();
-                    detalle.Precio_unitario = p.Precio;
-                    detalle.Id_producto = p.Id_producto;
-                    detalle.Cantidad = p.Stock;
-                    detalle.Subtotal = p.Precio * p.Stock;
+                    DetalleFacturaModel detalle = new DetalleFacturaModel
+                    {
+                        Precio_unitario = p.Precio,
+                        Id_producto = p.Id_producto,
+                        Cantidad = p.Stock,
+                        Subtotal = p.Precio * p.Stock
+                    };
                     ltsDetalles.Add(detalle);
                 }
 
@@ -242,41 +248,42 @@ namespace General.GUI.VENTAS
                 fact.Exp_Em = txbVendedor.Text;
 
                 Consultas.CREAR_FACTURA(fact);
-                MessageBox.Show("Se ha registro la venta exitosamente");
+                MessageBox.Show("Se ha registrado la venta exitosamente");
                 LimpiarFormulario();
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-               
         }
 
-        private void validacionesProcesar()
+        private bool validacionesProcesar()
         {
             if (ltsSeleccionados.Count == 0)
             {
-                MessageBox.Show("Sin productos! Debe agregar productos");
-                return;
+                MessageBox.Show("¡Sin productos! Debe agregar productos");
+                return false;
             }
 
-            if (txbRecibido.Text.Equals(""))
+            if (string.IsNullOrWhiteSpace(txbRecibido.Text))
             {
                 MessageBox.Show("Debe de digitar el importe recibido");
-                return;
+                return false;
             }
-            if (txbNomCliente.Text.Equals(""))
+
+            if (string.IsNullOrWhiteSpace(txbNomCliente.Text))
             {
                 MessageBox.Show("Debe seleccionar un cliente");
-                return;
+                return false;
             }
-            if (txbVendedor.Text.Equals(""))
+
+            if (string.IsNullOrWhiteSpace(txbVendedor.Text))
             {
                 MessageBox.Show("Debe de digitar el No expediente del vendedor");
-                return;
+                return false;
             }
+
+            return true;
         }
 
         private void LimpiarFormulario()
@@ -284,9 +291,14 @@ namespace General.GUI.VENTAS
             // Limpiando objetos
             cliente = new ClienteModel();
             ltsBuscados = new List<ProductoModel>();
+
+            // Recrear la lista ltsSeleccionados para eliminar referencias antiguas
             ltsSeleccionados = new BindingList<ProductoModel>();
 
-            // Limpiar todos los TextBox
+            // Configurar el DataGridView con la nueva lista vacía
+            dtgProductos.DataSource = ltsSeleccionados;
+
+            // Limpiar todos los TextBox y ComboBox
             foreach (Control control in this.Controls)
             {
                 if (control is TextBox)
@@ -297,11 +309,14 @@ namespace General.GUI.VENTAS
                 {
                     (control as ComboBox).SelectedIndex = -1;
                 }
-                else if (control is DataGridView)
-                {
-                    (control as DataGridView).Rows.Clear();
-                }
             }
+
+            // Limpiar el DataGridView
+            dtgProductos.Rows.Clear();
+            txbTotal.Text = "0";
+            txbRecibido.Text = "";
+            txbCanbio.Text = "";
+            lblMensaje.Text = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -320,12 +335,24 @@ namespace General.GUI.VENTAS
 
                     // Actualiza los subtotales
                     ActualizarSubtotales();
+                    MostrarMensaje("¡Actualizar cambio!", Color.Red);
                 }
             }
             else
             {
                 MessageBox.Show("Debe seleccionar un producto para eliminar.");
             }
+        }
+
+        private void MostrarMensaje(string mensaje, Color color)
+        {
+            lblMensaje.Text = mensaje;
+            lblMensaje.ForeColor = color;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
