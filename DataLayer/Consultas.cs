@@ -657,10 +657,10 @@ namespace DataLayer
                 Resultado = operacion.Consultar(Consulta);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-
+                Console.WriteLine(ex.Message.ToString());
             }
 
             return Resultado;
