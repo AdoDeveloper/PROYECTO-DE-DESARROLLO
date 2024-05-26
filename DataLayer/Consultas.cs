@@ -170,15 +170,76 @@ namespace DataLayer
                     }
 
                 }
+            }
+             return lts;
+        }
+        public static List<EmpleadoModel> OBTENER_EMPLEADOS()
+        {
+            List<EmpleadoModel> listaEmpleados = new List<EmpleadoModel>();
 
+            string consulta = "SELECT IDEmpleado, Nombres, Apellidos, DUI, Direccion, Telefono FROM empleados;";
+            DBOperacion operacion = new DBOperacion(); // Asegúrate de tener esta clase definida para operaciones en la base de datos
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    EmpleadoModel empleado = new EmpleadoModel();
+                    empleado.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
+                    empleado.Nombres = Convert.ToString(row["Nombres"]);
+                    empleado.Apellidos = Convert.ToString(row["Apellidos"]);
+                    empleado.DUI = Convert.ToString(row["DUI"]);
+                    empleado.Direccion = Convert.ToString(row["Direccion"]);
+                    empleado.Telefono = Convert.ToString(row["Telefono"]);
+
+                    listaEmpleados.Add(empleado);
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
 
-            return lts;
+           
+        
+
+            return listaEmpleados;
         }
+
+        public static List<UsuarioModel> OBTENER_USUARIOS()
+        {
+            List<UsuarioModel> listaUsuarios = new List<UsuarioModel>();
+
+            string consulta = "SELECT IDUsuario, Usuario, IDEmpleado, IDRol, Imagen FROM usuarios;";
+            DBOperacion operacion = new DBOperacion(); // Asegúrate de tener esta clase definida para operaciones en la base de datos
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UsuarioModel usuario = new UsuarioModel();
+                    usuario.ID_Usuario = Convert.ToInt32(row["IDUsuario"]);
+                    usuario.Usuario = Convert.ToString(row["Usuario"]);
+                    //usuario.Clave = Convert.ToString(row["Clave"]);
+                    usuario.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
+                    usuario.ID_Rol = Convert.ToInt32(row["IDRol"]);
+                    usuario.Imagen = row["Imagen"] == DBNull.Value ? null : (byte[])row["Imagen"];
+
+                    listaUsuarios.Add(usuario);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return listaUsuarios;
+        }
+
 
         public static ProductoModel OBTENER_PRODUCTO(Int32 id)
         {
@@ -248,14 +309,40 @@ namespace DataLayer
                     }
 
                 }
+            }
+             return lts;
+        }
 
+        public static EmpleadoModel OBTENER_EMPLEADO(Int32 id)
+        {
+            String consulta = "SELECT * FROM empleados WHERE IDEmpleado = " + id + " LIMIT 1";
+
+            DBOperacion operacion = new DBOperacion();
+            EmpleadoModel empleado = new EmpleadoModel();
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    int i = 0;
+
+                    empleado.ID_Empleado = Convert.ToInt32(dt.Rows[i]["IDEmpleado"]);
+                    empleado.Nombres = Convert.ToString(dt.Rows[i]["Nombres"]);
+                    empleado.Apellidos = Convert.ToString(dt.Rows[i]["Apellidos"]);
+                    empleado.DUI = Convert.ToString(dt.Rows[i]["DUI"]);
+                    empleado.Direccion = Convert.ToString(dt.Rows[i]["Direccion"]);
+                    empleado.Telefono = Convert.ToString(dt.Rows[i]["Telefono"]);
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
 
-            return lts;
+           
+            return empleado;
         }
 
 
@@ -285,6 +372,21 @@ namespace DataLayer
                 String consulta = "DELETE FROM permisos WHERE IDRol = " + rol + "  and IDOpcion = " + opc;
                 operacion.EjecutarSetencia(consulta);
 
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void ELIMINAR_EMPLEADO(Int32 id)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM empleados WHERE IDEmpleado = " + id;
+                operacion.EjecutarSetencia(consulta);
             }
             catch (Exception e)
             {
@@ -430,6 +532,20 @@ namespace DataLayer
             catch (Exception e)
             {
 
+        public static void AGREGAR_EMPLEADO(EmpleadoModel e)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO empleados(Nombres, Apellidos, DUI, Direccion, Telefono) " +
+                                  "VALUES ('" + e.Nombres + "', '" + e.Apellidos + "', '" + e.DUI + "', '" + e.Direccion + "', '" + e.Telefono + "')";
+
+                // Asegúrate de abrir la conexión antes de ejecutar la sentencia
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -456,6 +572,60 @@ namespace DataLayer
 
             }
         }
+
+        public static bool VALIDAR_DUI_EMPLEADO(EmpleadoModel e)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "SELECT COUNT(*) FROM empleados WHERE DUI = '" + e.DUI + "' AND IDEmpleado != " + e.ID_Empleado;
+                DataTable dt = operacion.Consultar(consulta);
+
+                // Verificar si el resultado tiene al menos una fila
+                if (dt.Rows.Count > 0)
+                {
+                    // Obtener el valor del primer registro en la primera columna
+                    int count = Convert.ToInt32(dt.Rows[0][0]);
+
+                    // Si count es 0, significa que el DUI es válido
+                    return count == 0;
+                }
+                else
+                {
+                    // No se encontraron resultados, retornar false por precaución
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo un error al validar el DUI del empleado: " + ex.Message);
+                return false; // En caso de error, retorna false
+            }
+        }
+
+
+        public static void EDITAR_EMPLEADO(EmpleadoModel e)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append("UPDATE empleados ");
+                consulta.Append("SET Nombres = '" + e.Nombres + "', ");
+                consulta.Append("Apellidos = '" + e.Apellidos + "', ");
+                consulta.Append("DUI = '" + e.DUI + "', ");
+                consulta.Append("Direccion = '" + e.Direccion + "', ");
+                consulta.Append("Telefono = '" + e.Telefono + "' ");
+                consulta.Append("WHERE IDEmpleado = " + e.ID_Empleado);
+
+                operacion.EjecutarSetencia(consulta.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
 
 
         public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
@@ -490,3 +660,6 @@ namespace DataLayer
         }
     }
 }
+    }
+}
+

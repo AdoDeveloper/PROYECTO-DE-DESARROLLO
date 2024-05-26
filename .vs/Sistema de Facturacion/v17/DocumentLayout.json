@@ -1,70 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\",
+  "WorkspaceRootPath": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{544F1ADC-C9C3-4A45-B69A-188989BA3C02}|SesionManager\\SesionManager.csproj|c:\\users\\gabri\\downloads\\sistema de facturacion\\sesionmanager\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{544F1ADC-C9C3-4A45-B69A-188989BA3C02}|SesionManager\\SesionManager.csproj|solutionrelative:sesionmanager\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_usuarios\\gestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_usuarios\\gestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\general\\gui\\rolesgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\rolesgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_usuarios\\gestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_usuarios\\gestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAC73EF2-D2AE-45B5-BE23-684922807338}|Reportes\\Reportes.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\reportes\\dat\\ordenes.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
-      "RelativeMoniker": "D:0:0:{DAC73EF2-D2AE-45B5-BE23-684922807338}|Reportes\\Reportes.csproj|solutionrelative:reportes\\dat\\ordenes.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_productos\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_productos\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAC73EF2-D2AE-45B5-BE23-684922807338}|Reportes\\Reportes.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\reportes\\dat\\dtsreporte.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{DAC73EF2-D2AE-45B5-BE23-684922807338}|Reportes\\Reportes.csproj|solutionrelative:reportes\\dat\\dtsreporte.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_productos\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_productos\\agregareditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAC73EF2-D2AE-45B5-BE23-684922807338}|Reportes\\Reportes.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\reportes\\dat\\dtsreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAC73EF2-D2AE-45B5-BE23-684922807338}|Reportes\\Reportes.csproj|solutionrelative:reportes\\dat\\dtsreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\general\\gui\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\general\\gui\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\modelos\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\modelos\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\general\\cls\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\cls\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\modelos\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\modelos\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\datalayer\\dboperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dboperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\sdv\\gui\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_empleados\\gestionempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,194 +54,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ordenes.rpt",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\Reportes\\DAT\\Ordenes.rpt",
-              "RelativeDocumentMoniker": "Reportes\\DAT\\Ordenes.rpt",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\Reportes\\DAT\\Ordenes.rpt",
-              "RelativeToolTip": "Reportes\\DAT\\Ordenes.rpt",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASDSURBVEhLtVVNTBx1FP/N98eyM/uBsLRACU0k0BYWsXw1xhAPHjQqpmptm/TQ2IMnDQcTTzXGmp5MqpFqNGkPjdWoSSvGxlStAYvaAlVLe1iIfC/QAmXZXZbdmR3fzE5QYKFe\u002Bpt5M29m3tf/vf97gwcKy7IYl11FadmOyt176hvdxy2RtbLZWzf/6psY/3vYfXV/tO8/eDR6J5ZdiCXvS5Mz94yPz14YUD0Fuqu\u002BAax7XwOPIkIvkPOS5pHh9UjwqhLxEhuuC9d98c3VOUEUZVd9DfI62AyUUtiHcxLPciwCfgWhQp398NOvrm8vrXjYFV3F/3ZgZcmqw5ALIvuRZRj4NBWF/gI01NdVHz9x6rwgiFJOMIf7OiBbyJK1LIXt3B2iJyIbHkWARqkrDBQwDQ314a8vXYs7H1xs6sA27JB7OKcd/eo3C4ZhIraUQsYwIPIcykM\u002BMAzD5SzksIWDXCrs1FgUrJ0SmwaTt9A50YmEkQTDslAVCYosQCby0kpYdu3OZ2V9e7GslWiSN8S77xzk8mwT8W5aFo1FXEx8Sw4\u002Bwsmhk4inl2DSezttdspsnfXgT3zSfeaP4aWRkemle8PdpyOekkdqDNPOuLsKip6umDXuoj/Th218CVTI\u002BGDifSTMJF4v70BQDJKsLbcR3KGXX5x8oqE43FoTOKKUNLcNxUJNv/wZFZPLKwgFyJTEUuQx9KZ/g8LJCHB\u002B9Mz2YHplGoOJm0gay2jW9oGzWAgCj5HJOZw70/mWax9cdW3rTCJl9prpxOWm6oJAVZlWGZnl5B8G7uK7q2OYTcyhr6gLFmMgyAfhZT34OXoFE7EJmBkTAwv9yBoWmv2tkEQeo\u002BsddP940TCNTFxU9el4Cj0BDyO1VOutgqhgfIHH4NQMhlM9GBP6McwM4zZzG4PXBjF3Yw7WUBbKqIxdehgNRXvhoe4em5pf48DZRd93fYZT73ak3nnz6FRqxYiUF6t4sk7CvhoNIlOO5d\u002BfQjQiYyQzgiEjgoXoPDCehTAl4KWyI3gm9AKWl9N5i7y6TZdiC5ieHLU\u002BP/ueqVN3FtEIqK9gEdQUiGwl2Ov7Yc0Wg6EBbKUsCGkB7eEDeL7xIHSvBkkS7B5wrf2LvH3A04xRabllhTwtmwMrqBDMKqQvt8OIBqFaKg41HsPhx16BX9Ph99FKRSHvLsrrwI6Eo4aRRBaaTPuU5cEpPoiJOjAXDuPV8Bt47tEDZNwHn88LUbCNU/R5PGzayXbzxCkV0UVS5UUoHgVFRTpqy6rxeEUbzR4/fLptXKQ5RfJO72xRg//CLtZyykBvxEDcVODXPdgZklFVquDZJorar1HkOqWFjJNsbhjaio76GmxwYEeRpv3ddWMFv04EULHtIbRUKairoKI2sNgZzNJg46lOXK7LbbI73iTK42C17Mdee5vZU9\u002BqFu7YdTzLKR1pUwD9uFBApPJpaOIKAl7OmZpUJFdrI/oHx/B0W\u002B1q4OsctCj089hLE3E3Fdr5RnyGUpBKrWTSX547bS3M33Hkt0L3T5fOu\u002ByDBvAPpv4NXXCfjRcAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-05-14T01:30:39.289Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dtsReporte.xsd",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\Reportes\\DAT\\dtsReporte.xsd",
-              "RelativeDocumentMoniker": "Reportes\\DAT\\dtsReporte.xsd",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\Reportes\\DAT\\dtsReporte.xsd",
-              "RelativeToolTip": "Reportes\\DAT\\dtsReporte.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-05-14T01:19:11.828Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RolesGestion.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\GUI\\RolesGestion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\RolesGestion.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\GUI\\RolesGestion.cs",
-              "RelativeToolTip": "General\\GUI\\RolesGestion.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAQwHgAAAAAAAAA",
+              "Title": "GestionUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T04:20:27.758Z"
+              "WhenOpened": "2024-05-25T06:05:27.653Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarEditar.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
+              "RelativeToolTip": "General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:00:09.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Consultas.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\DataLayer\\Consultas.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Consultas.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\DataLayer\\Consultas.cs",
-              "RelativeToolTip": "DataLayer\\Consultas.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAwwCYAAABLAAAA",
+              "Title": "AgregarEditar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "General\\GUI\\GESTION_PRODUCTOS\\AgregarEditar.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T03:08:34.088Z"
+              "WhenOpened": "2024-05-25T06:00:04.708Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
+              "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
+              "RelativeToolTip": "SDV\\GUI\\Principal.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAASwI0AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:36:53.39Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Principal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Principal.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
               "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Principal.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs [Dise\u00F1o]",
               "RelativeToolTip": "SDV\\GUI\\Principal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T22:24:27.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Principal.cs",
-              "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Principal.cs",
-              "RelativeToolTip": "SDV\\GUI\\Principal.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwCEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T22:20:23.11Z"
+              "WhenOpened": "2024-05-25T05:36:49.594Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Sesion.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SesionManager\\Sesion.cs",
-              "RelativeDocumentMoniker": "SesionManager\\Sesion.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SesionManager\\Sesion.cs",
-              "RelativeToolTip": "SesionManager\\Sesion.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwD4AAAAWAAAA",
+              "Title": "GestionUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs",
+              "RelativeToolTip": "General\\GUI\\GESTION_USUARIOS\\GestionUsuarios.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:19:35.19Z",
+              "WhenOpened": "2024-05-25T05:33:36.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dtsReporte.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\Reportes\\DAT\\dtsReporte.cs",
-              "RelativeDocumentMoniker": "Reportes\\DAT\\dtsReporte.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\Reportes\\DAT\\dtsReporte.cs",
-              "RelativeToolTip": "Reportes\\DAT\\dtsReporte.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "DocumentIndex": 7,
+              "Title": "Consultas.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Consultas.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
+              "RelativeToolTip": "DataLayer\\Consultas.cs",
+              "ViewState": "AQIAALIAAAAAAAAAAAAAAMMAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T01:24:09.351Z"
+              "WhenOpened": "2024-05-25T05:39:30.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GestionEmpleados.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs [Dise\u00F1o]",
+              "RelativeToolTip": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:34:49.228Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RolesEdicion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\GUI\\RolesEdicion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\RolesEdicion.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\GUI\\RolesEdicion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\RolesEdicion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-04-23T00:07:25.026Z"
+              "Title": "ProductoModel.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\ProductoModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\MODELOS\\ProductoModel.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\ProductoModel.cs",
+              "RelativeToolTip": "DataLayer\\MODELOS\\ProductoModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:22:43.64Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "RolesEdicion.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\GUI\\RolesEdicion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\RolesEdicion.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\GUI\\RolesEdicion.cs",
-              "RelativeToolTip": "General\\GUI\\RolesEdicion.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAgwCAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-04-22T22:15:46.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Splash.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Splash.cs",
-              "RelativeDocumentMoniker": "SDV\\GUI\\Splash.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Splash.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SDV\\GUI\\Splash.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-04-28T02:35:42.123Z"
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\MODELOS\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\UsuarioModel.cs",
+              "RelativeToolTip": "DataLayer\\MODELOS\\UsuarioModel.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAtwBcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:13:45.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Roles.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\CLS\\Roles.cs",
-              "RelativeDocumentMoniker": "General\\CLS\\Roles.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\General\\CLS\\Roles.cs",
-              "RelativeToolTip": "General\\CLS\\Roles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAANAAAA",
+              "Title": "GestionEmpleados.cs",
+              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
+              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
+              "RelativeToolTip": "General\\GUI\\GESTION_EMPLEADOS\\GestionEmpleados.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA1wBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T22:07:31.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DBConexion.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\DataLayer\\DBConexion.cs",
-              "RelativeDocumentMoniker": "DataLayer\\DBConexion.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\DataLayer\\DBConexion.cs",
-              "RelativeToolTip": "DataLayer\\DBConexion.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T02:37:28.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DBOperacion.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\DataLayer\\DBOperacion.cs",
-              "RelativeDocumentMoniker": "DataLayer\\DBOperacion.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\DataLayer\\DBOperacion.cs",
-              "RelativeToolTip": "DataLayer\\DBOperacion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T02:39:33.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Login.cs",
-              "RelativeDocumentMoniker": "SDV\\GUI\\Login.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Login.cs",
-              "RelativeToolTip": "SDV\\GUI\\Login.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwB4AAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-04-23T00:50:11.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Login.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Login.cs",
-              "RelativeDocumentMoniker": "SDV\\GUI\\Login.cs",
-              "ToolTip": "C:\\Users\\gabri\\Downloads\\Sistema de Facturacion\\SDV\\GUI\\Login.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SDV\\GUI\\Login.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-04-21T02:56:26.761Z"
+              "WhenOpened": "2024-05-25T05:34:52.321Z",
+              "EditorCaption": ""
             }
           ]
         }
