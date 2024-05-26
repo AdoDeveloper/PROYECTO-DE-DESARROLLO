@@ -44,8 +44,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CLS\HashHelper.cs" />
     <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="GUI\CLIENTES\AgregarEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CLIENTES\AgregarEditar.Designer.cs">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CLIENTES\GestionClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CLIENTES\GestionClientes.Designer.cs">
+      <DependentUpon>GestionClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GESTION_EMPLEADOS\AgregarEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +101,18 @@
     <Compile Include="GUI\GESTION_PRODUCTOS\GestionProductos.Designer.cs">
       <DependentUpon>GestionProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VENTAS\RealizarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VENTAS\RealizarVenta.Designer.cs">
+      <DependentUpon>RealizarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VENTAS\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VENTAS\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GESTION_USUARIOS\GestionUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +130,12 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\CLIENTES\AgregarEditar.resx">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CLIENTES\GestionClientes.resx">
+      <DependentUpon>GestionClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_EMPLEADOS\AgregarEditar.resx">
       <DependentUpon>AgregarEditar.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VENTAS\RealizarVenta.resx">
+      <DependentUpon>RealizarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_USUARIOS\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.cs</DependentUpon>

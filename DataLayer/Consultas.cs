@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -142,6 +143,36 @@ namespace DataLayer
             return lts;
         }
 
+        public static List<ClienteModel> OBTENER_CLIENTES()
+        {
+            List<ClienteModel> lts = new List<ClienteModel>();
+
+            String Consulta = "select * from clientes";
+
+            DBOperacion operacion = new DBOperacion();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+
+                        ClienteModel c = new ClienteModel();
+                        c.Id_cliente = Convert.ToInt32(dt.Rows[i]["id_cliente"]);
+                        c.Cliente = Convert.ToString(dt.Rows[i]["cliente"]);
+                        c.Telefono = Convert.ToString(dt.Rows[i]["telefono"]);
+                        c.Correo = Convert.ToString(dt.Rows[i]["correo"]);
+                        c.Dui = Convert.ToString(dt.Rows[i]["dui"]);
+                        lts.Add(c);
+                    }
+
+                }
+            }
+             return lts;
+        }
         public static List<EmpleadoModel> OBTENER_EMPLEADOS()
         {
             List<EmpleadoModel> listaEmpleados = new List<EmpleadoModel>();
@@ -170,6 +201,9 @@ namespace DataLayer
             {
                 Console.WriteLine(e.Message);
             }
+
+           
+        
 
             return listaEmpleados;
         }
@@ -246,6 +280,39 @@ namespace DataLayer
             return op;
         }
 
+        public static List<ProductoModel> BUSCAR_PRODUCTOS(String nombre)
+        {
+
+
+            String Consulta = "select * from productos where LOWER(producto) like '%" + nombre + "%'";
+
+            DBOperacion operacion = new DBOperacion();
+            List<ProductoModel> lts = new List<ProductoModel>();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    for(int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        ProductoModel op = new ProductoModel();
+                        op.Id_producto = Convert.ToInt32(dt.Rows[i]["id_producto"]);
+                        op.Producto = Convert.ToString(dt.Rows[i]["producto"]);
+                        op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
+                        op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
+                        op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
+                        op.Image = (byte[])dt.Rows[i]["imagen"];
+                        lts.Add(op);
+                    }
+
+                }
+            }
+             return lts;
+        }
+
         public static EmpleadoModel OBTENER_EMPLEADO(Int32 id)
         {
             String consulta = "SELECT * FROM empleados WHERE IDEmpleado = " + id + " LIMIT 1";
@@ -274,6 +341,7 @@ namespace DataLayer
                 Console.WriteLine(e.Message);
             }
 
+           
             return empleado;
         }
 
@@ -342,6 +410,127 @@ namespace DataLayer
 
             }
         }
+
+        public static void AGREGAR_CLIENTE(ClienteModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "INSERT INTO clientes(cliente,telefono,correo,dui) values (@cliente,@telefono,@correo,@dui)";
+                operacion.Comando.Parameters.AddWithValue("cliente", c.Cliente);
+                operacion.Comando.Parameters.AddWithValue("telefono", c.Telefono);
+                operacion.Comando.Parameters.AddWithValue("correo", c.Correo);
+                operacion.Comando.Parameters.AddWithValue("dui", c.Dui);
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static FacturaModel OBTENER_FACTURA_POR_No(String NoFac)
+        {
+
+
+            String Consulta = "select * from facturas where no_factura = '" + NoFac + "' limit 1";
+
+            DBOperacion operacion = new DBOperacion();
+            FacturaModel op = new FacturaModel();
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    int i = 0;
+
+
+                    op.Id_factura = Convert.ToInt32(dt.Rows[i]["id_factura"]);
+                    op.Total = Convert.ToDouble(dt.Rows[i]["total"]);
+                    op.Fecha = Convert.ToString(dt.Rows[i]["fecha"]);
+                    op.Id_cliente = Convert.ToInt32(dt.Rows[i]["id_cliente"]);
+
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return op;
+        }
+
+        public static void CREAR_FACTURA(FacturaModel factura)
+        {
+            try
+            {
+                // Insertando factura
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO facturas(total,no_factura,id_cliente) VALUES (@total,@nofa,@cliente)";
+                operacion.Comando.Parameters.AddWithValue("total", factura.Total);
+                operacion.Comando.Parameters.AddWithValue("nofa", factura.No_factura);
+                operacion.Comando.Parameters.AddWithValue("cliente", factura.Cliente.Id_cliente);
+                operacion.EjecutarSetencia(consulta);
+
+                // Obtenemos la factura creada
+                FacturaModel newFac = OBTENER_FACTURA_POR_No(factura.No_factura);
+
+                // Insertar los detalles
+                StringBuilder stringDetalles = new StringBuilder();
+                stringDetalles.Append("INSERT INTO detalles_factura(id_factura,id_producto,cantidad,precio_unitario,subtotal) VALUES ");
+
+                foreach (DetalleFacturaModel detalle in factura.Detalles)
+                {
+                    stringDetalles.AppendFormat("({0}, {1}, {2}, {3}, {4}), ",
+                        newFac.Id_factura, detalle.Id_producto, detalle.Cantidad, detalle.Precio_unitario, detalle.Subtotal);
+                }
+
+                // Remover la última coma y espacio
+                if (stringDetalles.Length > 0)
+                {
+                    stringDetalles.Remove(stringDetalles.Length - 2, 2); // Eliminar la última coma y espacio
+                }
+
+                string query = stringDetalles.ToString();
+                Console.WriteLine(query);
+
+                DBOperacion operacion2 = new DBOperacion();
+                operacion2.EjecutarSetencia(query);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al crear la factura", e);
+            }
+        }
+
+
+
+
+        public static void EDITAR_CLIENTE(ClienteModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append(" UPDATE clientes ");
+                consulta.Append(" SET cliente =  '" + c.Cliente + "', ");
+                consulta.Append("  telefono =  '" + c.Telefono + "', ");
+                consulta.Append("  correo =  '" + c.Correo + "', ");
+                consulta.Append("  dui =  '" + c.Dui + "' ") ;
+                consulta.Append(" WHERE id_cliente =  " + c.Id_cliente);
+                operacion.EjecutarSetencia(consulta.ToString());
+
+            }
+            catch (Exception e)
+            {
 
         public static void AGREGAR_EMPLEADO(EmpleadoModel e)
         {
@@ -471,3 +660,6 @@ namespace DataLayer
         }
     }
 }
+    }
+}
+

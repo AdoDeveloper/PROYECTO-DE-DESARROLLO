@@ -92,18 +92,24 @@ namespace SDV.GUI
         {
             switch (IDOpcion)
             {
-                case 5:
-
+                case 8:
+                    General.GUI.VENTAS.RealizarVenta v = new General.GUI.VENTAS.RealizarVenta();
+                    v.ShowDialog();
                     break;
                 case 9:
-                    // Abre la ventana de usuario
+                    
                     General.GUI.RolesGestion f = new General.GUI.RolesGestion();
                     f.ShowDialog();
                     break;
                 case 12:
-                    // Abre la ventana de usuario
+                    
                    General.GUI.PRODUCTOS.GestionProductos fd = new General.GUI.PRODUCTOS.GestionProductos();
                     fd.ShowDialog();
+                    break;
+                case 24:
+
+                    General.GUI.CLIENTES.GestionClientes c = new General.GUI.CLIENTES.GestionClientes();
+                    c.ShowDialog();
                     break;
                 default:
                     
