@@ -65,23 +65,40 @@ namespace General.GUI.GESTION_ROLES_PERMISOS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Int32 opcionDelete = Convert.ToInt32(dtgPermisos.CurrentRow.Cells["IDOpcion"].Value.ToString());
-            var exists = ltsOpcionesRol.Where(opc => opc.IDOpcion == opcionDelete);
-
-            if (!exists.Any())
+            // Verifica si hay una fila seleccionada en el DataGridView 'dtgAsignados'
+            if (dtgAsignados.CurrentRow != null)
             {
-                MessageBox.Show("No existe permiso para elminar");
+                // Obtiene el ID de la opción seleccionada para eliminar
+                Int32 opcionDelete = Convert.ToInt32(dtgAsignados.CurrentRow.Cells["IDOpcion"].Value.ToString());
+
+                // Busca la opción en la lista de opciones del rol
+                var exists = ltsOpcionesRol.FirstOrDefault(opc => opc.IDOpcion == opcionDelete);
+
+                if (exists == null)
+                {
+                    MessageBox.Show("No existe permiso para eliminar.");
+                }
+                else
+                {
+                    // Llama al método para eliminar la opción del rol
+                    DataLayer.Consultas.ELIMINAR_OPCION_ROL(this.IDRol, opcionDelete);
+                    MessageBox.Show("El permiso se eliminó correctamente.");
+
+                    // Actualiza la lista de opciones del rol y el DataGridView
+                    ltsOpcionesRol.Remove(exists);
+                    dtgAsignados.DataSource = null;
+                    dtgAsignados.DataSource = ltsOpcionesRol;
+                    dtgAsignados.Refresh();
+                }
             }
             else
             {
-                DataLayer.Consultas.ELIMINAR_OPCION_ROL(this.IDRol, opcionDelete);
-                MessageBox.Show("El permiso se elimino correctamente");
-                obtenerOpcionesRol();
-
+                MessageBox.Show("Debe seleccionar un permiso para eliminar.");
             }
         }
 
-            private void label2_Click(object sender, EventArgs e)
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

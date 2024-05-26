@@ -106,10 +106,20 @@ namespace SDV.GUI
                    General.GUI.PRODUCTOS.GestionProductos fd = new General.GUI.PRODUCTOS.GestionProductos();
                     fd.ShowDialog();
                     break;
+                case 20:
+
+                    General.GUI.GESTION_EMPLEADOS.GestionEmpleados empleados = new General.GUI.GESTION_EMPLEADOS.GestionEmpleados();
+                    empleados.ShowDialog();
+                    break;
                 case 24:
 
                     General.GUI.CLIENTES.GestionClientes c = new General.GUI.CLIENTES.GestionClientes();
                     c.ShowDialog();
+                    break;
+                case 29:
+
+                    General.GUI.GESTION_USUARIOS.GestionUsuarios usuarios = new General.GUI.GESTION_USUARIOS.GestionUsuarios();
+                    usuarios.ShowDialog();
                     break;
                 default:
                     
@@ -153,6 +163,11 @@ namespace SDV.GUI
 
 
             }
+        }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

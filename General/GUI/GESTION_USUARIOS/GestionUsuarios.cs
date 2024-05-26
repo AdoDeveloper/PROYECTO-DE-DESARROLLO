@@ -78,9 +78,9 @@ public Image byteArrayToImage(byte[] byteArrayIn)
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarEditar f = new AgregarEditar();
-            f.setEditar(false);
-            f.ShowDialog();
+           // AgregarEditar f = new AgregarEditar();
+            //f.setEditar(false);
+            //f.ShowDialog();
             CargarUsuarios();
         }
     }

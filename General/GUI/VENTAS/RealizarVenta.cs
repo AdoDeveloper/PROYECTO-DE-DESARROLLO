@@ -41,6 +41,11 @@ namespace General.GUI.VENTAS
                 dtgProductos.Columns["Image"].Visible = false;
             }
 
+            if (dtgProductos.Columns["Cantidad"] != null)
+            {
+                dtgProductos.Columns["Cantidad"].ReadOnly = false;
+            }
+
             if (dtgProductos.Columns["Descripcion"] != null)
             {
                 dtgProductos.Columns["Descripcion"].Visible = false;
@@ -129,6 +134,15 @@ namespace General.GUI.VENTAS
                 Int32 id_producto = Convert.ToInt32(cmbProducto.SelectedItem.ToString().Split('-')[0]);
 
                 ProductoModel seleccionado = ltsBuscados.Find(element => element.Id_producto == id_producto);
+
+                var exists = ltsSeleccionados.Where(opc => opc.Id_producto == seleccionado.Id_producto);
+
+                if (exists.Any())
+                {
+                    MessageBox.Show("El producto ya se agrego a la lista");
+                    return;
+                }
+
                 seleccionado.Stock = Convert.ToInt32(txbCantidad.Text);
                 ltsSeleccionados.Add(seleccionado);
                 ActualizarSubtotales();
@@ -174,19 +188,32 @@ namespace General.GUI.VENTAS
                     double total = Convert.ToDouble(txbTotal.Text);
                     double recibido = Convert.ToDouble(txbRecibido.Text);
 
-                    // Calcular el cambio
-                    double cambio = recibido - total;
+                    // Verificar si el recibido es menor que el total
+                    if (recibido < total)
+                    {
+                        MessageBox.Show("El monto recibido no puede ser menor que el total.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txbCanbio.Text = string.Empty; // Limpiar el campo de cambio
+                        txbRecibido.Text = string.Empty;
+                    }
+                    else
+                    {
+                        // Calcular el cambio
+                        double cambio = recibido - total;
 
-                    // Mostrar el resultado en el textbox de cambio
-                    txbCanbio.Text = cambio.ToString("F2"); // "F2" para formato con 2 decimales
+                        // Mostrar el resultado en el textbox de cambio
+                        txbCanbio.Text = cambio.ToString("F2"); // "F2" para formato con 2 decimales
+                    }
                 }
                 catch (FormatException)
                 {
                     // Mostrar mensaje de error si las conversiones fallan
                     MessageBox.Show("Por favor, ingrese valores numéricos válidos en los campos Total y Recibido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txbCanbio.Text = string.Empty; // Limpiar el campo de cambio en caso de error
+                    txbRecibido.Text = string.Empty;
                 }
             }
         }
+
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
@@ -276,5 +303,28 @@ namespace General.GUI.VENTAS
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            // Verifica si hay una fila seleccionada en el DataGridView
+            if (dtgProductos.SelectedRows.Count > 0)
+            {
+                // Obtiene la fila seleccionada
+                DataGridViewRow selectedRow = dtgProductos.SelectedRows[0];
+
+                // Obtiene el producto de la fila seleccionada
+                if (selectedRow.DataBoundItem is ProductoModel productoSeleccionado)
+                {
+                    // Elimina el producto de la lista de seleccionados
+                    ltsSeleccionados.Remove(productoSeleccionado);
+
+                    // Actualiza los subtotales
+                    ActualizarSubtotales();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un producto para eliminar.");
+            }
+        }
     }
 }

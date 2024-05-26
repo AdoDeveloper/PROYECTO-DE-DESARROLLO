@@ -45,47 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAT\dtsReporte.cs">
-      <DependentUpon>dtsReporte.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DAT\dtsReporte.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dtsReporte.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DAT\Ordenes.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ordenes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DAT\" />
     <Folder Include="GUI\" />
     <Folder Include="REP\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DAT\dtsReporte.xsc">
-      <DependentUpon>dtsReporte.xsd</DependentUpon>
-    </None>
-    <None Include="DAT\dtsReporte.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dtsReporte.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DAT\dtsReporte.xss">
-      <DependentUpon>dtsReporte.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="DAT\Ordenes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Ordenes.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
