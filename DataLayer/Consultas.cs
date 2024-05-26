@@ -174,6 +174,39 @@ namespace DataLayer
             return listaEmpleados;
         }
 
+        public static List<UsuarioModel> OBTENER_USUARIOS()
+        {
+            List<UsuarioModel> listaUsuarios = new List<UsuarioModel>();
+
+            string consulta = "SELECT IDUsuario, Usuario, IDEmpleado, IDRol, Imagen FROM usuarios;";
+            DBOperacion operacion = new DBOperacion(); // Asegúrate de tener esta clase definida para operaciones en la base de datos
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UsuarioModel usuario = new UsuarioModel();
+                    usuario.ID_Usuario = Convert.ToInt32(row["IDUsuario"]);
+                    usuario.Usuario = Convert.ToString(row["Usuario"]);
+                    //usuario.Clave = Convert.ToString(row["Clave"]);
+                    usuario.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
+                    usuario.ID_Rol = Convert.ToInt32(row["IDRol"]);
+                    usuario.Imagen = row["Imagen"] == DBNull.Value ? null : (byte[])row["Imagen"];
+
+                    listaUsuarios.Add(usuario);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return listaUsuarios;
+        }
+
+
         public static ProductoModel OBTENER_PRODUCTO(Int32 id)
         {
             
