@@ -41,6 +41,11 @@ namespace General.GUI.VENTAS
                 dtgProductos.Columns["Image"].Visible = false;
             }
 
+            if (dtgProductos.Columns["Cantidad"] != null)
+            {
+                dtgProductos.Columns["Cantidad"].ReadOnly = false;
+            }
+
             if (dtgProductos.Columns["Descripcion"] != null)
             {
                 dtgProductos.Columns["Descripcion"].Visible = false;
@@ -129,6 +134,15 @@ namespace General.GUI.VENTAS
                 Int32 id_producto = Convert.ToInt32(cmbProducto.SelectedItem.ToString().Split('-')[0]);
 
                 ProductoModel seleccionado = ltsBuscados.Find(element => element.Id_producto == id_producto);
+
+                var exists = ltsSeleccionados.Where(opc => opc.Id_producto == seleccionado.Id_producto);
+
+                if (exists.Any())
+                {
+                    MessageBox.Show("El producto ya se agrego a la lista");
+                    return;
+                }
+
                 seleccionado.Stock = Convert.ToInt32(txbCantidad.Text);
                 ltsSeleccionados.Add(seleccionado);
                 ActualizarSubtotales();
