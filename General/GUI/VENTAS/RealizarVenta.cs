@@ -278,7 +278,26 @@ namespace General.GUI.VENTAS
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            // Verifica si hay una fila seleccionada en el DataGridView
+            if (dtgProductos.SelectedRows.Count > 0)
+            {
+                // Obtiene la fila seleccionada
+                DataGridViewRow selectedRow = dtgProductos.SelectedRows[0];
 
+                // Obtiene el producto de la fila seleccionada
+                if (selectedRow.DataBoundItem is ProductoModel productoSeleccionado)
+                {
+                    // Elimina el producto de la lista de seleccionados
+                    ltsSeleccionados.Remove(productoSeleccionado);
+
+                    // Actualiza los subtotales
+                    ActualizarSubtotales();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un producto para eliminar.");
+            }
         }
     }
 }
