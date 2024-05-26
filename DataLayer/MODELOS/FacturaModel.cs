@@ -13,6 +13,7 @@ namespace DataLayer.MODELOS
         double _total;
         String no_factura;
         Int32 _id_cliente;
+        String _exp_em;
         List<DetalleFacturaModel> _detalles;
         ClienteModel _cliente;
         public int Id_factura { get => _id_factura; set => _id_factura = value; }
@@ -22,5 +23,6 @@ namespace DataLayer.MODELOS
         public int Id_cliente { get => _id_cliente; set => _id_cliente = value; }
         public List<DetalleFacturaModel> Detalles { get => _detalles; set => _detalles = value; }
         public ClienteModel Cliente { get => _cliente; set => _cliente = value; }
+        public string Exp_Em { get => _exp_em; set => _exp_em = value; }
     }
 }
