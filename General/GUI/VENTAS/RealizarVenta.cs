@@ -276,5 +276,9 @@ namespace General.GUI.VENTAS
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
