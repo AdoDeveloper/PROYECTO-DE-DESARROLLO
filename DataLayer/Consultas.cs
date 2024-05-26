@@ -171,6 +171,10 @@ namespace DataLayer
 
                 }
             }
+            catch
+            {
+
+            }
              return lts;
         }
         public static List<EmpleadoModel> OBTENER_EMPLEADOS()
@@ -310,6 +314,7 @@ namespace DataLayer
 
                 }
             }
+            catch { }
              return lts;
         }
 
@@ -524,13 +529,15 @@ namespace DataLayer
                 consulta.Append(" SET cliente =  '" + c.Cliente + "', ");
                 consulta.Append("  telefono =  '" + c.Telefono + "', ");
                 consulta.Append("  correo =  '" + c.Correo + "', ");
-                consulta.Append("  dui =  '" + c.Dui + "' ") ;
+                consulta.Append("  dui =  '" + c.Dui + "' ");
                 consulta.Append(" WHERE id_cliente =  " + c.Id_cliente);
                 operacion.EjecutarSetencia(consulta.ToString());
 
             }
             catch (Exception e)
             {
+            }
+        }
 
         public static void AGREGAR_EMPLEADO(EmpleadoModel e)
         {
@@ -660,6 +667,3 @@ namespace DataLayer
         }
     }
 }
-    }
-}
-

@@ -132,3 +132,6 @@ C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESAR
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.pdb
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_EMPLEADOS.AgregarEditar.resources
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_USUARIOS.GestionUsuarios.resources
+C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.AgregarEditar.resources
+C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.GestionClientes.resources
+C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.VENTAS.RealizarVenta.resources
