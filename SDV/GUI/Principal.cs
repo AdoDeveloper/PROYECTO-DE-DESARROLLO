@@ -129,5 +129,24 @@ namespace SDV.GUI
 
             }
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (oSesion.ValidarPermiso(1))
+                {
+                    General.GUI.GESTION_USUARIOS.GestionUsuarios f = new General.GUI.GESTION_USUARIOS.GestionUsuarios();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
     }
 }
