@@ -36,7 +36,7 @@
             this.rolLabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.button2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -68,6 +68,7 @@
             this.dtgAsignados.Location = new System.Drawing.Point(478, 257);
             this.dtgAsignados.Name = "dtgAsignados";
             this.dtgAsignados.ReadOnly = true;
+            this.dtgAsignados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgAsignados.Size = new System.Drawing.Size(373, 186);
             this.dtgAsignados.TabIndex = 2;
             // 
@@ -81,6 +82,7 @@
             this.dtgPermisos.MultiSelect = false;
             this.dtgPermisos.Name = "dtgPermisos";
             this.dtgPermisos.ReadOnly = true;
+            this.dtgPermisos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgPermisos.Size = new System.Drawing.Size(438, 400);
             this.dtgPermisos.TabIndex = 3;
             // 
@@ -111,7 +113,7 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.btnEliminar,
+            this.button2,
             this.toolStripSeparator1,
             this.txbFiltro,
             this.toolStripLabel1});
@@ -130,14 +132,14 @@
             this.toolStripButton1.Text = "Agregar";
             this.toolStripButton1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnEliminar
+            // button2
             // 
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(78, 28);
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 28);
+            this.button2.Text = "Eliminar";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toolStripSeparator1
             // 
@@ -201,7 +203,7 @@
         private System.Windows.Forms.Label rolLabel;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.ToolStripButton button2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;

@@ -138,6 +138,7 @@
             this.dtgProductos.MultiSelect = false;
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.ReadOnly = true;
+            this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgProductos.Size = new System.Drawing.Size(803, 255);
             this.dtgProductos.TabIndex = 12;
             // 

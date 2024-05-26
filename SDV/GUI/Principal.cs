@@ -164,5 +164,10 @@ namespace SDV.GUI
 
             }
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
