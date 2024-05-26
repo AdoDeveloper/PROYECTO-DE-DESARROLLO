@@ -478,10 +478,11 @@ namespace DataLayer
             {
                 // Insertando factura
                 DBOperacion operacion = new DBOperacion();
-                string consulta = "INSERT INTO facturas(total,no_factura,id_cliente) VALUES (@total,@nofa,@cliente)";
+                string consulta = "INSERT INTO facturas(total,no_factura,id_cliente,exp_em) VALUES (@total,@nofa,@cliente, @vendedor)";
                 operacion.Comando.Parameters.AddWithValue("total", factura.Total);
                 operacion.Comando.Parameters.AddWithValue("nofa", factura.No_factura);
                 operacion.Comando.Parameters.AddWithValue("cliente", factura.Cliente.Id_cliente);
+                operacion.Comando.Parameters.AddWithValue("vendedor", factura.Exp_Em);
                 operacion.EjecutarSetencia(consulta);
 
                 // Obtenemos la factura creada

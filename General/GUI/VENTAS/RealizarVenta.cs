@@ -239,6 +239,7 @@ namespace General.GUI.VENTAS
                 fact.Total = Convert.ToDouble(txbTotal.Text);
                 fact.Cliente = cliente;
                 fact.Detalles = ltsDetalles;
+                fact.Exp_Em = txbVendedor.Text;
 
                 Consultas.CREAR_FACTURA(fact);
                 MessageBox.Show("Se ha registro la venta exitosamente");

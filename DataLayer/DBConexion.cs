@@ -17,7 +17,7 @@ namespace DataLayer
             Boolean Resultado = true;
             try
             {
-                _CONEXION.ConnectionString = "Server=localhost;Port=3306;Database=sistema;Uid=root;Pwd=; SSL Mode=None";
+                _CONEXION.ConnectionString = "Server=viaduct.proxy.rlwy.net;Port=58708;Database=railway;Uid=root;Pwd=IuAPhOylOWzSQOtfHILTqfnRpltdvNKQ; SSL Mode=None";
                 _CONEXION.Open();
                 Resultado = true;
             }
