@@ -248,6 +248,7 @@ namespace General.GUI.VENTAS
                 fact.Exp_Em = txbVendedor.Text;
 
                 Consultas.CREAR_FACTURA(fact);
+                EmailService.EnviarFacturaPorCorreo(fact, fact.Cliente.Correo);
                 MessageBox.Show("Se ha registrado la venta exitosamente");
                 LimpiarFormulario();
             }
