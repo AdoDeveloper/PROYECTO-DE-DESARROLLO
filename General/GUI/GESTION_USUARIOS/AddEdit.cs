@@ -162,7 +162,7 @@ namespace General.GUI.GESTION_USUARIOS
                 }
                 newUsuario.Usuario = txbNombre.Text;
 
-                    newUsuario.Clave = txbClave.Text;
+                newUsuario.Clave = txbClave.Text;
                 
                 newUsuario.ID_Rol = Convert.ToInt32(cmbRol.SelectedItem.ToString().Split('-')[0]);
                 newUsuario.ID_Empleado = Convert.ToInt32(cmbEmpleados.SelectedItem.ToString().Split('-')[0]);

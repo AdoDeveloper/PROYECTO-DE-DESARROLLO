@@ -79,5 +79,27 @@ public Image byteArrayToImage(byte[] byteArrayIn)
             f.ShowDialog();
             CargarUsuarios();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    
+                    int id = Convert.ToInt32(dtgUsuarios.CurrentRow.Cells["ID_Usuario"].Value.ToString());
+                    Consultas.ELIMINAR_USUARIO(id);
+                    MessageBox.Show("Registro eliminado");
+                    
+                    
+                    CargarUsuarios();
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
     }
 }

@@ -147,5 +147,10 @@ namespace General.GUI
             oRol.isEditForm(false);
             oRol.ShowDialog();
         }
+
+        private void RolesGestion_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
