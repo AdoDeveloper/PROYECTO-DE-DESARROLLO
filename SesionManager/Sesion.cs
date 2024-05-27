@@ -16,15 +16,31 @@ namespace SesionManager
         private static readonly object _lock = new object();
 
         String _Usuario;
+        String _IDEmpleado;
         String _IDRol;
-        
-        
-
+        String _Conexion;
+        String _Rol;
 
 
         public string Usuario { get => _Usuario; set => _Usuario = value; }
-        public string IDRol { get => _IDRol; set => _IDRol = value; }
+        public string IDRol { get => _IDRol;
+    set
+    {
+        _IDRol = value;
+        ObtenerNombreRol();
+    } }
+        public string IDEmpleado
+        {
+            get => _IDEmpleado;
+            set
+            {
+                _IDEmpleado = value;
+                ObtenerNombreYApellidoEmpleado();
+            }
+        }
 
+        public string Conexion { get => _Conexion; set => _Conexion = value; }
+        public string Rol { get => _Rol; set => _Rol = value; }
 
         public static Sesion ObtenerInstancia()
         {
@@ -44,6 +60,53 @@ namespace SesionManager
         {
 
         }
+
+        private void ObtenerNombreYApellidoEmpleado()
+        {
+            if (!string.IsNullOrEmpty(_IDEmpleado))
+            {
+                StringBuilder Sentencia = new StringBuilder();
+                Sentencia.Append("SELECT Nombres, Apellidos FROM empleados ");
+                Sentencia.Append("WHERE IDEmpleado = '" + _IDEmpleado + "';");
+
+                DataLayer.DBOperacion operacion = new DataLayer.DBOperacion();
+                DataTable Resultado = operacion.Consultar(Sentencia.ToString());
+
+                if (Resultado.Rows.Count > 0)
+                {
+                    string nombre = Resultado.Rows[0]["Nombres"].ToString();
+                    string apellido = Resultado.Rows[0]["Apellidos"].ToString();
+                    _Usuario = nombre + " " + apellido;
+                }
+                else
+                {
+                    throw new Exception("Empleado no encontrado.");
+                }
+            }
+        }
+
+        private void ObtenerNombreRol()
+        {
+            if (!string.IsNullOrEmpty(_IDRol))
+            {
+                StringBuilder Sentencia = new StringBuilder();
+                Sentencia.Append("SELECT Rol FROM roles ");
+                Sentencia.Append("WHERE IDRol = '" + _IDRol + "';");
+
+                DataLayer.DBOperacion operacion = new DataLayer.DBOperacion();
+                DataTable Resultado = operacion.Consultar(Sentencia.ToString());
+
+                if (Resultado.Rows.Count > 0)
+                {
+                    _Rol = Resultado.Rows[0]["Rol"].ToString();
+                }
+                else
+                {
+                    throw new Exception("Rol no encontrado.");
+                }
+            }
+        }
+
 
         public bool ValidarPermiso(int pIDOpcion)
         {
@@ -147,6 +210,9 @@ namespace SesionManager
             }
             return lstOpciones;
         }
+
+        
+
     }
-    
+
 }

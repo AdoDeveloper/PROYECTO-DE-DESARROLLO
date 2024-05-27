@@ -85,6 +85,9 @@ D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.PRODUCTOS.GestionProduc
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.AgregarEditar.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.GestionClientes.resources
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.VENTAS.RealizarVenta.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_EMPLEADOS.AgregarEditar.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_EMPLEADOS.GestionEmpleados.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_USUARIOS.GestionUsuarios.resources
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\bin\Debug\General.dll.config
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\bin\Debug\General.dll
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\bin\Debug\General.pdb
@@ -118,6 +121,7 @@ C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESAR
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.AssemblyReference.cache
+C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.ACERCADE.About.resources
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.AgregarEditar.resources
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.CLIENTES.GestionClientes.resources
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_EMPLEADOS.AgregarEditar.resources
@@ -135,6 +139,3 @@ C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESAR
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.Up2Date
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.dll
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.pdb
-D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_EMPLEADOS.AgregarEditar.resources
-D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_EMPLEADOS.GestionEmpleados.resources
-D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_USUARIOS.GestionUsuarios.resources

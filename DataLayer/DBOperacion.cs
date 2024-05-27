@@ -50,6 +50,7 @@ namespace DataLayer
                     Comando.CommandType= System.Data.CommandType.Text;
                     Comando.CommandText = pSetencia;
                     FilasAfectadas = Comando.ExecuteNonQuery();
+                    base.Desconectar();
                 }
             }
             catch (Exception e)

@@ -51,8 +51,10 @@ namespace SDV.GUI
                 if (dt.Rows.Count == 1)
                 {
                     SesionManager.Sesion oSesion = SesionManager.Sesion.ObtenerInstancia();
-                    oSesion.Usuario = txbUsuario.Text;
+
+                    oSesion.IDEmpleado = dt.Rows[0]["IDEmpleado"].ToString();
                     oSesion.IDRol = dt.Rows[0]["IDRol"].ToString();
+                    oSesion.Conexion = "Conectado a la base de datos";
                     _Autorizado = true;
                     this.Close();
                 }

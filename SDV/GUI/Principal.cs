@@ -48,6 +48,8 @@ namespace SDV.GUI
         private void Principal_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = oSesion.Usuario;
+            lblRol.Text = oSesion.Rol;
+            lblConexion.Text = oSesion.Conexion;
             generarOpciones();
 
         }
@@ -121,6 +123,16 @@ namespace SDV.GUI
                     General.GUI.GESTION_USUARIOS.GestionUsuarios usuarios = new General.GUI.GESTION_USUARIOS.GestionUsuarios();
                     usuarios.ShowDialog();
                     break;
+                case 35:
+
+                    Reportes.GUI.Ventas reporte = new Reportes.GUI.Ventas();
+                    reporte.ShowDialog();
+                    break;
+                case 36:
+
+                    General.GUI.ACERCADE.About about = new General.GUI.ACERCADE.About();
+                    about.ShowDialog();
+                    break;
                 default:
                     
                     break;
@@ -167,7 +179,22 @@ namespace SDV.GUI
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != this)
+                {
+                    form.Close();
+                }
+            }
             Application.Exit();
+        }
+
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.GUI.Ventas f = new Reportes.GUI.Ventas();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

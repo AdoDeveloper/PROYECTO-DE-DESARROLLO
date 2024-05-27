@@ -226,8 +226,19 @@ namespace General.GUI.VENTAS
                     return; // Detener el proceso si alguna validación falla
                 }
 
+                // Validar que el expediente existe
+                string expediente = txbVendedor.Text;
+                bool expExiste = Consultas.CONSULTAR_EXP(expediente);
+
+                if (!expExiste)
+                {
+                    MessageBox.Show("El expediente no existe en la base de datos.");
+                    return; // Detener el proceso si el expediente no existe
+                }
+
                 List<DetalleFacturaModel> ltsDetalles = new List<DetalleFacturaModel>();
                 FacturaModel fact = new FacturaModel();
+                MovimientoModel mov = new MovimientoModel();
 
                 foreach (ProductoModel p in ltsSeleccionados)
                 {
@@ -239,6 +250,12 @@ namespace General.GUI.VENTAS
                         Subtotal = p.Precio * p.Stock
                     };
                     ltsDetalles.Add(detalle);
+
+                    // Restar la cantidad vendida del stock del producto en la base de datos
+                    ProductoModel pro = new ProductoModel();
+                    pro.Id_producto = p.Id_producto;
+                    pro.Stock = p.Stock; // Pasar la cantidad vendida al modelo ProductoModel
+                    Consultas.ACTUALIZAR_STOCK_PRODUCTO(pro);
                 }
 
                 fact.No_factura = HashHelper.Generate(5);
@@ -247,7 +264,13 @@ namespace General.GUI.VENTAS
                 fact.Detalles = ltsDetalles;
                 fact.Exp_Em = txbVendedor.Text;
 
+                // Asignar los valores al movimiento
+                mov.Monto = Convert.ToDouble(txbTotal.Text); // Convierte el total a un valor doble
+                mov.Concepto = cliente.Cliente + " - venta a cliente"; // Construye el concepto del movimiento
+                mov.Id_cuenta = 1; // Asigna la cuenta (1 para ventas)
+
                 Consultas.CREAR_FACTURA(fact);
+                Consultas.GUARDAR_MOVIMIENTO(mov);
                 MessageBox.Show("Se ha registrado la venta exitosamente");
                 LimpiarFormulario();
             }
@@ -256,6 +279,7 @@ namespace General.GUI.VENTAS
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private bool validacionesProcesar()
         {

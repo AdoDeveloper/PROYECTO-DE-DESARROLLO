@@ -100,6 +100,7 @@
     <Compile Include="MODELOS\DetalleFacturaModel.cs" />
     <Compile Include="MODELOS\FacturaModel.cs" />
     <Compile Include="MODELOS\EmpleadoModel.cs" />
+    <Compile Include="MODELOS\MovimientoModel.cs" />
     <Compile Include="MODELOS\OpcionModel.cs" />
     <Compile Include="MODELOS\ProductoModel.cs" />
     <Compile Include="MODELOS\UsuarioModel.cs" />

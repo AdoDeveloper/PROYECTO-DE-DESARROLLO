@@ -516,8 +516,78 @@ namespace DataLayer
             }
         }
 
+        public static bool CONSULTAR_EXP(string exp)
+        {
+            try
+            {
+                // Crear la instancia de DBOperacion
+                DBOperacion operacion = new DBOperacion();
+
+                // Definir la consulta SQL para verificar si el expediente existe
+                string consulta = "SELECT COUNT(*) AS cantidad FROM empleados WHERE no_expediente = @exp";
+
+                // Agregar el parámetro a la consulta
+                operacion.Comando.Parameters.Clear();
+                operacion.Comando.Parameters.AddWithValue("@exp", exp);
+
+                // Ejecutar la consulta y obtener el resultado en un DataTable
+                DataTable resultado = operacion.Consultar(consulta);
+
+                // Verificar si el resultado tiene filas y obtener la cantidad
+                if (resultado.Rows.Count > 0)
+                {
+                    int count = Convert.ToInt32(resultado.Rows[0]["cantidad"]);
+                    // Retornar true si el expediente existe (count > 0), de lo contrario false
+                    return count > 0;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                // Manejar la excepción (puedes agregar log o cualquier otro manejo de error aquí)
+                throw new Exception("Error al consultar el expediente", e);
+            }
+        }
+
+        // Método para actualizar el stock de un producto en la base de datos
+        public static void ACTUALIZAR_STOCK_PRODUCTO(ProductoModel producto)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "UPDATE productos SET stock = stock - @cantidadVendida WHERE id_producto = @idProducto";
+                operacion.Comando.Parameters.AddWithValue("cantidadVendida", producto.Stock); // Recibir la cantidad vendida en lugar del nuevo stock
+                operacion.Comando.Parameters.AddWithValue("idProducto", producto.Id_producto);
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error al actualizar el stock del producto: " + e.Message);
+            }
+        }
 
 
+
+        public static void GUARDAR_MOVIMIENTO(MovimientoModel mov)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string insertMovimiento = "INSERT INTO movimientos (monto, concepto, fecha, id_cuenta) VALUES (@monto, @concepto, NOW(), @idCuenta)";
+                operacion.Comando.Parameters.AddWithValue("monto", mov.Monto);
+                operacion.Comando.Parameters.AddWithValue("concepto", mov.Concepto);
+                operacion.Comando.Parameters.AddWithValue("idCuenta", mov.Id_cuenta);
+                operacion.EjecutarSetencia(insertMovimiento);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al guardar el movimiento", e);
+            }
+        }
 
         public static void EDITAR_CLIENTE(ClienteModel c)
         {
@@ -636,21 +706,32 @@ namespace DataLayer
 
 
 
-        public static DataTable ORDENES_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
+        public static DataTable VENTAS_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
         {
             DataTable Resultado = new DataTable();
 
-            String Consulta = @"select a.OrderID, a.OrderDate, b.CompanyName, 
-                                CONCAT(c.FirstName,' ',c.LastName) Empleado,
-                                SUM(d.UnitPrice*d.Quantity) SubTotal,
-                                SUM(d.Discount*(d.UnitPrice*d.Quantity)) Descuento,
-                                SUM(d.UnitPrice*d.Quantity*(1-d.Discount)) Total
-                                from orders a
-                                inner join customers b on b.CustomerID = a.CustomerID
-                                inner join employees c on c.EmployeeID = a.EmployeeID
-                                inner join orderdetails d on d.OrderID = a.OrderID
-                                WHERE CAST(a.OrderDate AS DATE) between '"+pFechaInicio+"' AND '"+pFechaFinal+@"';
-                                group by a.OrderID;";
+            String Consulta = @"SELECT 
+                f.id_factura AS ID_Factura,
+                f.fecha AS Fecha,
+                f.no_factura AS No_Factura,
+                c.cliente AS Cliente,
+                CONCAT(MAX(e.Nombres),' ',MAX(e.Apellidos)) AS Empleado,
+                GROUP_CONCAT(CONCAT(p.producto, ' (', df.cantidad, ')') SEPARATOR ', ') AS Detalles_Productos,
+                SUM(df.subtotal) AS Total_Venta
+                FROM 
+                    facturas f
+                INNER JOIN 
+                    clientes c ON f.id_cliente = c.id_cliente
+                LEFT JOIN 
+                    detalles_factura df ON f.id_factura = df.id_factura
+                LEFT JOIN 
+                    productos p ON df.id_producto = p.id_producto
+                LEFT JOIN 
+                    empleados e ON f.exp_em = e.no_expediente
+                WHERE
+                    f.fecha BETWEEN '" + pFechaInicio + "' AND '" + pFechaFinal + @"'
+                GROUP BY 
+                    f.id_factura, f.fecha, f.total, f.no_factura, c.cliente;";
             DBOperacion operacion = new DBOperacion();
 
             try

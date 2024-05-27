@@ -36,6 +36,12 @@ namespace SDV.CLS
                     return Resource1.clientes;
                 case 29:
                     return Resource1.usuarios;
+                case 34:
+                    return Resource1.report;
+                case 35:
+                    return Resource1.vent;
+                case 36:
+                    return Resource1.about;
                 default:
                     return null;
             }

@@ -47,6 +47,12 @@
     <Compile Include="CLS\HashHelper.cs" />
     <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="GUI\ACERCADE\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ACERCADE\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\CLIENTES\AgregarEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\ACERCADE\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\CLIENTES\AgregarEditar.resx">
       <DependentUpon>AgregarEditar.cs</DependentUpon>
     </EmbeddedResource>
