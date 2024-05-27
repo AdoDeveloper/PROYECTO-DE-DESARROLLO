@@ -20,7 +20,10 @@ namespace General.GUI.GESTION_USUARIOS
             InitializeComponent();
             CargarUsuarios();
         }
-
+        public int ContarRegistros()
+        {
+            return dtgUsuarios.Rows.Count;
+        }
         public void CargarUsuarios()
         {
             try
@@ -58,8 +61,9 @@ namespace General.GUI.GESTION_USUARIOS
             {
                 Console.WriteLine(ex.ToString());
             }
-            
 
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
         }
         // Método para convertir los bytes de imagen en un objeto Image
 public Image byteArrayToImage(byte[] byteArrayIn)

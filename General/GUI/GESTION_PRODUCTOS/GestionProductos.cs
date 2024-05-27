@@ -36,7 +36,10 @@ namespace General.GUI.PRODUCTOS
             // Aquí recargarás el DataGridView
             CargarProductos();
         }
-
+        public int ContarRegistros()
+        {
+            return dtgProductos.Rows.Count;
+        }
         public void CargarProductos()
         {
             List<ProductoModel> productoModels = Consultas.OBTENER_PRODUCTOS();
@@ -45,6 +48,29 @@ namespace General.GUI.PRODUCTOS
             {
                 dtgProductos.Columns["Image"].Visible = false;
             }
+
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
+        }
+        private void FiltrarProductos(string filtro)
+        {
+            try
+            {
+                List<ProductoModel> productosFiltrados = Consultas.FILTRAR_PRODUCTOS(filtro);
+                dtgProductos.DataSource = productosFiltrados;
+                int totalRegistros = ContarRegistros();
+                lblContador.Text = $": {totalRegistros}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error al filtrar los datos: {ex.Message}");
+            }
+        }
+
+        private void txbFiltro_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txbFiltro.Text.Trim();
+            FiltrarProductos(filtro.ToLower());
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -59,5 +85,7 @@ namespace General.GUI.PRODUCTOS
             f.setProducto(productoSeleccionado);
             f.Show();
         }
+
+       
     }
 }

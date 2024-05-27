@@ -15,6 +15,18 @@ namespace General.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        public RolesGestion()
+        {
+
+            InitializeComponent();
+            Cargar();
+            txbFiltro.TextChanged += (s, e) => FiltrarLocalmente();
+
+        }
+        public int ContarRegistros()
+        {
+            return dataGridView1.Rows.Count;
+        }
         private void Cargar()
         {
             try
@@ -27,35 +39,24 @@ namespace General.GUI
             {
               
             }
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
         }
-
+  
         private void FiltrarLocalmente()
         {
             try
             {
-                if(txbFiltro.Text.Trim().Length <= 0) {
-                    _DATOS.RemoveFilter();
-                }
-                else
-                {
-                    _DATOS.Filter = "Rol like '%" + txbFiltro.Text + "%'";
-                }
+                string filtro = txbFiltro.Text.Trim();
+                _DATOS.Filter = string.IsNullOrEmpty(filtro) ? "" : $"Rol LIKE '%{filtro}%'";
+
                 dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.DataSource = _DATOS;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                
+                MessageBox.Show($"Ocurrió un error al filtrar los datos: {ex.Message}");
             }
-          
-        }
-        public RolesGestion()
-        {
-           
-            InitializeComponent();
-            Cargar();
-
         }
 
         private void RolesGestion_Load(object sender, EventArgs e)
@@ -128,6 +129,11 @@ namespace General.GUI
             {
                 MessageBox.Show("Debe seleccionar un item");
             }
+
+        }
+
+        private void lblContador_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -41,12 +41,39 @@ namespace General.GUI.CLIENTES
             // Aquí recargarás el DataGridView
             CargarClientes();
         }
-
+        public int ContarRegistros()
+        {
+            return dtgClientes.Rows.Count;
+        }
         public void CargarClientes()
         {
             List<ClienteModel> clientes = Consultas.OBTENER_CLIENTES();
             dtgClientes.DataSource = clientes;
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
         }
+
+        private void FiltrarClientes(string filtro)
+        {
+            try
+            {
+                List<ClienteModel> clientesFiltrados = Consultas.FILTRAR_CLIENTES(filtro);
+                dtgClientes.DataSource = clientesFiltrados;
+                int totalRegistros = ContarRegistros();
+                lblContador.Text = $": {totalRegistros}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error al filtrar los datos: {ex.Message}");
+            }
+        }
+
+        private void txbFiltro_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txbFiltro.Text.Trim();
+            FiltrarClientes(filtro.ToLower());
+        }
+
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -73,5 +100,12 @@ namespace General.GUI.CLIENTES
             setClienteOnVenta?.Invoke(this, EventArgs.Empty, clienteSeleccionado);
             this.Close();
         }
+
+        private void GestionClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
