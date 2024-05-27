@@ -121,6 +121,11 @@ namespace SDV.GUI
                     General.GUI.GESTION_USUARIOS.GestionUsuarios usuarios = new General.GUI.GESTION_USUARIOS.GestionUsuarios();
                     usuarios.ShowDialog();
                     break;
+                case 16:
+
+                    General.GUI.GESTION_PROVEEDORES.GestionProveedor gp = new General.GUI.GESTION_PROVEEDORES.GestionProveedor();
+                    gp.ShowDialog();
+                    break;
                 default:
                     
                     break;

@@ -101,11 +101,14 @@ namespace General.GUI.CLIENTES
             this.Close();
         }
 
-        private void GestionClientes_Load(object sender, EventArgs e)
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                ClienteModel clienteSeleccionado = (ClienteModel)dtgClientes.CurrentRow.DataBoundItem;
+                Consultas.ELIMINAR_CLIENTE(clienteSeleccionado.Id_cliente);
+                CargarClientes();
+            }
         }
-
-        
     }
 }

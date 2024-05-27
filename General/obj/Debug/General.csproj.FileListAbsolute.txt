@@ -188,3 +188,5 @@ C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\D
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.Up2Date
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.dll
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.pdb
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_PROVEEDORES.AgregarEditar.resources
+D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_PROVEEDORES.GestionProveedor.resources

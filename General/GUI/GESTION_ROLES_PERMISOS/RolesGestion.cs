@@ -115,6 +115,12 @@ namespace General.GUI
             }
         }
 
+        private void FormNuevo_UpdateDataGridView(object sender, EventArgs e)
+        {
+            // Aquí recargarás el DataGridView
+            Cargar();
+        }
+
         private void btnPermisos_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow.Selected)
@@ -132,9 +138,14 @@ namespace General.GUI
 
         }
 
-        private void lblContador_Click(object sender, EventArgs e)
-        {
 
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            RolesEdicion oRol = new RolesEdicion();
+            oRol.UpdateDataGridView += FormNuevo_UpdateDataGridView;
+            oRol.isEditForm(false);
+            oRol.ShowDialog();
         }
     }
 }
