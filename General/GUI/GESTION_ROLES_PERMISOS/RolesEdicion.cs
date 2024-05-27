@@ -10,8 +10,16 @@ using System.Windows.Forms;
 
 namespace General.GUI
 {
+    
     public partial class RolesEdicion : Form
     {
+        bool isEditar = true;
+
+        public delegate void UpdateDataGridViewEventHandler(object sender, EventArgs e);
+
+
+        public event UpdateDataGridViewEventHandler UpdateDataGridView;
+
         private Boolean Validar()
         {
             Boolean Valido = true;
@@ -36,7 +44,21 @@ namespace General.GUI
             InitializeComponent();
         }
 
-  
+        public void isEditForm(bool ok)
+        {
+            this.isEditar = ok;
+            if (isEditar)
+            {
+                this.Text = "Editar Rol";
+                
+            }
+            else
+            {
+                this.label1.Visible = false;
+                this.txbIDRol.Visible = false;
+                this.Text = "Crear Rol";
+            }
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -45,51 +67,63 @@ namespace General.GUI
 
         private void bntGuardar_Click(object sender, EventArgs e)
         {
-
+            
             try
             {
-                if (Validar())
+                //CREAR UN OBJETO A PARTIR DE LA CLASE ENTIDAD
+                CLS.Roles oRol = new CLS.Roles();
+                //SINCRONIZAMOS EL OBJETO CON LA GUI
+
+                if (isEditar)
                 {
-                    //CREAR UN OBJETO A PARTIR DE LA CLASE ENTIDAD
-                    CLS.Roles oRol = new CLS.Roles();
-                    //SINCRONIZAMOS EL OBJETO CON LA GUI
-                   
-                    try
+                    if (Validar())
                     {
-                        oRol.IDRol = Convert.ToInt32(txbIDRol.Text);
+                    
+                            oRol.IDRol = Convert.ToInt32(txbIDRol.Text);
+                        
+                            oRol.Rol = txbRol.Text;
+
+                            //ACTUALIZAR REGISTRO
+                            if (oRol.Actualizar())
+                            {
+                                MessageBox.Show("Registro Actualizado");
+                                UpdateDataGridView?.Invoke(this, EventArgs.Empty);
+                            Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El registro no pude ser actualizado");
+                            }
+
                     }
-                    catch (Exception)
+                    else
+                    {
+                        MessageBox.Show("Debe llenar los campos");
+                    }
+                }
+                else
+                {
+                    if (Validar())
                     {
 
-                        oRol.IDRol = 0;
-                    }
-                    oRol.Rol = txbRol.Text;
-                    //PROCEDER
-                    if(txbIDRol.Text.Trim().Length == 0)
-                    {
-                        //GUARDAR NUEVO REGISTROS
+                        
+
+                        oRol.Rol = txbRol.Text;
                         if (oRol.Insertar())
                         {
                             MessageBox.Show("Registro Guardado");
+                            UpdateDataGridView?.Invoke(this, EventArgs.Empty);
                             Close();
                         }
                         else
                         {
                             MessageBox.Show("El registro no pude ser almacenado");
                         }
+
                     }
                     else
                     {
-                        //ACTUALIZAR REGISTRO
-                        if (oRol.Actualizar())
-                        {
-                            MessageBox.Show("Registro Actualizado");
-                            Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("El registro no pude ser actualizado");
-                        }
+                        MessageBox.Show("Debe llenar los campos");
                     }
                 }
             }
