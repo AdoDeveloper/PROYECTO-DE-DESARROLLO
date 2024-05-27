@@ -149,7 +149,7 @@
             this.lblContador.Name = "lblContador";
             this.lblContador.Size = new System.Drawing.Size(22, 25);
             this.lblContador.Text = "0";
-            this.lblContador.Click += new System.EventHandler(this.lblContador_Click);
+            //this.lblContador.Click += new System.EventHandler();
             // 
             // dataGridView1
             // 

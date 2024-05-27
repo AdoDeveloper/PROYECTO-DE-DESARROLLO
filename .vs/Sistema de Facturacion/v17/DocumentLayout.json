@@ -3,15 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\general\\gui\\clientes\\gestionclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\clientes\\gestionclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\general\\gui\\gestion_roles_permisos\\rolesgestion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_roles_permisos\\rolesgestion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\general\\gui\\gestion_roles_permisos\\rolesgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_roles_permisos\\rolesgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\general\\gui\\gestion_roles_permisos\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\general\\gui\\gestion_roles_permisos\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_roles_permisos\\rolesedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\general\\gui\\clientes\\gestionclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\general\\gui\\clientes\\gestionclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\clientes\\gestionclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -31,6 +43,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GestionClientes.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\CLIENTES\\GestionClientes.Designer.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\CLIENTES\\GestionClientes.Designer.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\CLIENTES\\GestionClientes.Designer.cs*",
+              "RelativeToolTip": "General\\GUI\\CLIENTES\\GestionClientes.Designer.cs*",
+              "ViewState": "AQIAAKkAAAAAAAAAAAD4v7AAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T06:37:11.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
+              "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
+              "RelativeToolTip": "SDV\\GUI\\Principal.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAD4v30AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T06:36:33.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RolesGestion.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\RolesGestion.Designer.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GESTION_ROLES_PERMISOS\\RolesGestion.Designer.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\RolesGestion.Designer.cs",
+              "RelativeToolTip": "General\\GUI\\GESTION_ROLES_PERMISOS\\RolesGestion.Designer.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAD4v5cAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T06:35:51.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RolesGestion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\RolesGestion.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_ROLES_PERMISOS\\RolesGestion.cs",
@@ -42,31 +93,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RolesEdicion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\RolesEdicion.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GESTION_ROLES_PERMISOS\\RolesEdicion.cs",
               "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\RolesEdicion.cs [Dise\u00F1o]",
               "RelativeToolTip": "General\\GUI\\GESTION_ROLES_PERMISOS\\RolesEdicion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T05:43:49.505Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-27T05:43:49.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "GestionClientes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\CLIENTES\\GestionClientes.cs",
               "RelativeDocumentMoniker": "General\\GUI\\CLIENTES\\GestionClientes.cs",
               "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\CLIENTES\\GestionClientes.cs [Dise\u00F1o]",
               "RelativeToolTip": "General\\GUI\\CLIENTES\\GestionClientes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T05:43:00.315Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-27T05:43:00.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Consultas.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
               "RelativeDocumentMoniker": "DataLayer\\Consultas.cs",
@@ -74,8 +123,7 @@
               "RelativeToolTip": "DataLayer\\Consultas.cs",
               "ViewState": "AQIAANgCAAAAAAAAAADwvwMDAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T04:54:34.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T04:54:34.441Z"
             }
           ]
         }

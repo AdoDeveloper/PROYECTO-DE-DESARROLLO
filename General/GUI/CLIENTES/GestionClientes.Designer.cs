@@ -174,7 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GestionClientes";
             this.Text = "Gestion de clientes";
-            this.Load += new System.EventHandler(this.GestionClientes_Load);
+            //this.Load += new System.EventHandler(this.GestionClientes_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
