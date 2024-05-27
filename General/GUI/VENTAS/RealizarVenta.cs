@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace General.GUI.VENTAS
 {
-    public partial class RealizarVenta : Form
+    public partial class RealizarCompra : Form
     {
         ClienteModel cliente = new ClienteModel();
 
@@ -22,7 +22,7 @@ namespace General.GUI.VENTAS
 
         private BindingList<ProductoModel> ltsSeleccionados = new BindingList<ProductoModel>();
 
-        public RealizarVenta()
+        public RealizarCompra()
         {
             InitializeComponent();
             confDataGridViewProductos();

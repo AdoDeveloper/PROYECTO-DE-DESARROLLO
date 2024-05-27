@@ -1,6 +1,6 @@
 ﻿namespace General.GUI.VENTAS
 {
-    partial class RealizarVenta
+    partial class RealizarCompra
     {
         /// <summary>
         /// Required designer variable.

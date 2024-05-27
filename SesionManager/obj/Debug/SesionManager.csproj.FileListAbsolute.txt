@@ -34,42 +34,6 @@ C:\Users\gabri\Downloads\Sistema de Facturacion\SesionManager\bin\Debug\System.I
 C:\Users\gabri\Downloads\Sistema de Facturacion\SesionManager\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\gabri\Downloads\Sistema de Facturacion\SesionManager\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\gabri\Downloads\Sistema de Facturacion\SesionManager\obj\Debug\SesionMa.C27CDDB7.Up2Date
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.csproj.AssemblyReference.cache
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.csproj.CoreCompileInputs.cache
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\SesionManager.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\SesionManager.pdb
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\MySql.Data.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\Google.Protobuf.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\ZstdSharp.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\BouncyCastle.Cryptography.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Memory.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Buffers.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.IO.Pipelines.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Hash.xxHash.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Numerics.Vectors.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.pdb
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.dll.config
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\MySql.Data.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\Google.Protobuf.pdb
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\Google.Protobuf.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\BouncyCastle.Cryptography.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Memory.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Buffers.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.IO.Pipelines.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Hash.xxHash.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Numerics.Vectors.xml
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.csproj.CopyComplete
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.dll
-D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.pdb
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\SesionManager.dll
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\SesionManager.pdb
 C:\Users\ernes\Desktop\CICLO 01-2024\DESARROLLO DE SOFTWARE II\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.dll
@@ -142,3 +106,39 @@ C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\SesionManager
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionMa.C27CDDB7.Up2Date
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.dll
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.pdb
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\SesionManager.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\SesionManager.pdb
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\MySql.Data.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\Google.Protobuf.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\ZstdSharp.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\BouncyCastle.Cryptography.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Memory.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Buffers.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.IO.Pipelines.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Hash.xxHash.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Numerics.Vectors.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.pdb
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\DataLayer.dll.config
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\MySql.Data.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\Google.Protobuf.pdb
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\Google.Protobuf.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\BouncyCastle.Cryptography.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Memory.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Buffers.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Compression.LZ4.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.IO.Pipelines.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\K4os.Hash.xxHash.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\bin\Debug\System.Numerics.Vectors.xml
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.csproj.AssemblyReference.cache
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.csproj.CoreCompileInputs.cache
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.csproj.CopyComplete
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.dll
+D:\PROYECTO-DE-DESARROLLO-\SesionManager\obj\Debug\SesionManager.pdb

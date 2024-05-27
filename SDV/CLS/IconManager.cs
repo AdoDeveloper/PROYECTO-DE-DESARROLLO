@@ -36,6 +36,10 @@ namespace SDV.CLS
                     return Resource1.clientes;
                 case 29:
                     return Resource1.usuarios;
+                case 38:
+                    return Resource1.realizar_compra;
+                case 37:
+                    return Resource1.compras;
                 default:
                     return null;
             }

@@ -78,7 +78,7 @@ namespace SesionManager
         public List<OpcionModel> ObtenerOpciones()
         {
             List<OpcionModel> lstOpciones = new List<OpcionModel>();
-            String Sentencia = "select o.* \r\nfrom opciones o \r\ninner join permisos p on p.IDOpcion  = o.IDOpcion and p.IDRol = " + IDRol;
+            String Sentencia = "select o.* \r\nfrom opciones o \r\ninner join permisos p on p.IDOpcion  = o.IDOpcion and p.IDRol = " + IDRol + " order by o.orden";
             DataTable Resultado = new DataTable();
 
             try

@@ -93,7 +93,7 @@ namespace SDV.GUI
             switch (IDOpcion)
             {
                 case 8:
-                    General.GUI.VENTAS.RealizarVenta v = new General.GUI.VENTAS.RealizarVenta();
+                    General.GUI.VENTAS.RealizarCompra v = new General.GUI.VENTAS.RealizarCompra();
                     v.ShowDialog();
                     break;
                 case 9:
@@ -125,6 +125,11 @@ namespace SDV.GUI
 
                     General.GUI.GESTION_PROVEEDORES.GestionProveedor gp = new General.GUI.GESTION_PROVEEDORES.GestionProveedor();
                     gp.ShowDialog();
+                    break;
+                case 38:
+
+                    General.GUI.COMPRAS.RealizarCompra compras = new General.GUI.COMPRAS.RealizarCompra();
+                    compras.ShowDialog();
                     break;
                 default:
                     
