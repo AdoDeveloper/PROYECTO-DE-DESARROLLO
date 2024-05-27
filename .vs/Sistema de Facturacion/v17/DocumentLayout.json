@@ -1,42 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\",
+  "WorkspaceRootPath": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\ventas\\realizarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\ventas\\realizarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\ventas\\realizarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\ventas\\realizarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\datalayer\\modelos\\facturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\modelos\\facturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\gestion_roles_permisos\\gestionpermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\gestion_roles_permisos\\gestionpermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|c:\\users\\ernes\\desktop\\ciclo 01-2024\\desarrollo de software ii\\proyecto-de-desarrollo-\\general\\gui\\ventas\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6EEA3706-77C8-4A91-86A8-59A0126747F5}|General\\General.csproj|solutionrelative:general\\gui\\ventas\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\sdv\\gui\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|c:\\users\\gabri\\documents\\github\\desarrollo\\proyecto-de-desarrollo-\\sdv\\gui\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F1F85B2-6484-4DEC-9A1F-FFE8B430974F}|SDV\\SDV.csproj|solutionrelative:sdv\\gui\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97503E3F-0849-4B4D-AB57-D5105039A38E}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,138 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GestionPermisos.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\GestionPermisos.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GESTION_ROLES_PERMISOS\\GestionPermisos.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\GESTION_ROLES_PERMISOS\\GestionPermisos.cs",
-              "RelativeToolTip": "General\\GUI\\GESTION_ROLES_PERMISOS\\GestionPermisos.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAwwEwAAAAjAAAA",
+              "DocumentIndex": 2,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "SDV\\GUI\\Login.Designer.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.Designer.cs",
+              "RelativeToolTip": "SDV\\GUI\\Login.Designer.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAD4v0UAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T12:23:00.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.cs",
-              "RelativeDocumentMoniker": "SDV\\GUI\\Login.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.cs",
-              "RelativeToolTip": "SDV\\GUI\\Login.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwDEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T12:11:56.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
-              "RelativeDocumentMoniker": "SDV\\GUI\\Principal.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Principal.cs",
-              "RelativeToolTip": "SDV\\GUI\\Principal.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAIAwwKsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T05:36:53.39Z",
+              "WhenOpened": "2024-05-27T00:08:12.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Consultas.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Consultas.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\Consultas.cs",
-              "RelativeToolTip": "DataLayer\\Consultas.cs",
-              "ViewState": "AQIAANoBAAAAAAAAAAAywOUBAAA1AAAA",
+              "Title": "Splash.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Splash.cs",
+              "RelativeDocumentMoniker": "SDV\\GUI\\Splash.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Splash.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SDV\\GUI\\Splash.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T05:39:30.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T00:03:36.231Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RealizarVenta.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\VENTAS\\RealizarVenta.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\VENTAS\\RealizarVenta.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\VENTAS\\RealizarVenta.cs",
-              "RelativeToolTip": "General\\GUI\\VENTAS\\RealizarVenta.cs",
-              "ViewState": "AQIAAAsBAAAAAAAAAAAAwB4BAAAJAAAA",
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.cs",
+              "RelativeDocumentMoniker": "SDV\\GUI\\Login.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.cs",
+              "RelativeToolTip": "SDV\\GUI\\Login.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAADwv0oAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T11:54:21.572Z",
+              "WhenOpened": "2024-05-26T22:51:00.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RealizarVenta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\VENTAS\\RealizarVenta.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\VENTAS\\RealizarVenta.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\VENTAS\\RealizarVenta.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\VENTAS\\RealizarVenta.cs [Dise\u00F1o]",
+              "Title": "Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.cs",
+              "RelativeDocumentMoniker": "SDV\\GUI\\Login.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\SDV\\GUI\\Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SDV\\GUI\\Login.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T11:54:16.918Z",
+              "WhenOpened": "2024-05-26T21:25:52.099Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DBConexion.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\DBConexion.cs",
-              "RelativeDocumentMoniker": "DataLayer\\DBConexion.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\DBConexion.cs",
-              "RelativeToolTip": "DataLayer\\DBConexion.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAowBAAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T14:23:37.743Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FacturaModel.cs",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\FacturaModel.cs",
-              "RelativeDocumentMoniker": "DataLayer\\MODELOS\\FacturaModel.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\DataLayer\\MODELOS\\FacturaModel.cs",
-              "RelativeToolTip": "DataLayer\\MODELOS\\FacturaModel.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwBwAAAAAAAAA",
+              "Title": "DBConexion.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\DataLayer\\DBConexion.cs",
+              "RelativeDocumentMoniker": "DataLayer\\DBConexion.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\DESARROLLO\\PROYECTO-DE-DESARROLLO-\\DataLayer\\DBConexion.cs",
+              "RelativeToolTip": "DataLayer\\DBConexion.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA7wBAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T14:50:46.441Z",
+              "WhenOpened": "2024-05-26T14:23:37.743Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Ventas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\VENTAS\\Ventas.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\VENTAS\\Ventas.cs",
-              "ToolTip": "C:\\Users\\ernes\\Desktop\\CICLO 01-2024\\DESARROLLO DE SOFTWARE II\\PROYECTO-DE-DESARROLLO-\\General\\GUI\\VENTAS\\Ventas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\VENTAS\\Ventas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T11:54:14.357Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
