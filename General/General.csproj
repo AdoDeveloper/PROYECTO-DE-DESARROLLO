@@ -77,6 +77,18 @@
     <Compile Include="GUI\GESTION_PRODUCTOS\AgregarEditar.Designer.cs">
       <DependentUpon>AgregarEditar.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\AgregarEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\AgregarEditar.Designer.cs">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\GestionProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\GestionProveedor.Designer.cs">
+      <DependentUpon>GestionProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_PRODUCTOS\GestionProductos.resx">
       <DependentUpon>GestionProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_PROVEEDORES\AgregarEditar.resx">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_PROVEEDORES\GestionProveedor.resx">
+      <DependentUpon>GestionProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.resx">
       <DependentUpon>GestionPermisos.cs</DependentUpon>
