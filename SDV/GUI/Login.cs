@@ -30,8 +30,8 @@ namespace SDV.GUI
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txbUsuario.Text = "Gaby";
-            txbClave.Text = "12345";
+            //txbUsuario.Text = "Gaby";
+            //txbClave.Text = "12345";
         }
 
        

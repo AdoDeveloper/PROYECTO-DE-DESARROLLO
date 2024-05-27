@@ -130,7 +130,6 @@ C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\D
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_ROLES_PERMISOS.GestionPermisos.resources
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.RolesEdicion.resources
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.RolesGestion.resources
-C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.VENTAS.RealizarVenta.resources
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_USUARIOS.GestionUsuarios.resources
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.Properties.Resources.resources
 C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.GenerateResource.cache
@@ -193,3 +192,6 @@ D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.CoreCompileInputs.ca
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.csproj.CopyComplete
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.dll
 D:\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.pdb
+C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.COMPRAS.RealizarCompra.resources
+C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.GESTION_USUARIOS.AddEdit.resources
+C:\Users\gabri\Documents\GitHub\DESARROLLO\PROYECTO-DE-DESARROLLO-\General\obj\Debug\General.GUI.VENTAS.RealizarCompra.resources

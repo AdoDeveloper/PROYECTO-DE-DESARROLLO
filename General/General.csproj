@@ -120,6 +120,12 @@
     <Compile Include="GUI\GESTION_PRODUCTOS\GestionProductos.Designer.cs">
       <DependentUpon>GestionProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GESTION_USUARIOS\AddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_USUARIOS\AddEdit.Designer.cs">
+      <DependentUpon>AddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VENTAS\RealizarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_USUARIOS\AddEdit.resx">
+      <DependentUpon>AddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VENTAS\RealizarVenta.resx">
       <DependentUpon>RealizarVenta.cs</DependentUpon>

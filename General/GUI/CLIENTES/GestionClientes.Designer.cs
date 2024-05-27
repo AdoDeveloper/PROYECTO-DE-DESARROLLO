@@ -87,7 +87,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(78, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(102, 29);
             this.toolStripButton1.Text = "Eliminar";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -174,7 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GestionClientes";
             this.Text = "Gestion de clientes";
-            //this.Load += new System.EventHandler(this.GestionClientes_Load);
+            this.Load += new System.EventHandler(this.GestionClientes_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();

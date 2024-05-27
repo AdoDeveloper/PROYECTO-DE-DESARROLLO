@@ -110,5 +110,10 @@ namespace General.GUI.CLIENTES
                 CargarClientes();
             }
         }
+
+        private void GestionClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

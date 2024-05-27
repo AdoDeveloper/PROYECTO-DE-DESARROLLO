@@ -33,6 +33,44 @@ namespace DataLayer
             return Resultado;
         }
 
+
+        public static List<RolModel> OBTENER_ROLES()
+        {
+            List<RolModel> lts = new List<RolModel>();
+
+            String Consulta = @"SELECT IDRol, Rol FROM roles ORDER BY Rol ASC;";
+            DBOperacion operacion = new DBOperacion();
+
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+
+                        RolModel op = new RolModel();
+                        op.IdRol = Convert.ToInt32(dt.Rows[i]["IDRol"]);
+                        op.Rol = Convert.ToString(dt.Rows[i]["Rol"]);
+
+
+                        lts.Add(op);
+                    }
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return lts;
+        }
+
         public static List<OpcionModel> OBTENER_TODAS_LAS_OPCIONES()
         {
             List<OpcionModel> lts = new List<OpcionModel>(); 
@@ -216,7 +254,7 @@ namespace DataLayer
         {
             List<UsuarioModel> listaUsuarios = new List<UsuarioModel>();
 
-            string consulta = "SELECT IDUsuario, Usuario, IDEmpleado, IDRol, Imagen FROM usuarios;";
+            string consulta = "SELECT IDUsuario, Usuario, Clave , IDEmpleado, IDRol FROM usuarios;";
             DBOperacion operacion = new DBOperacion(); // Asegúrate de tener esta clase definida para operaciones en la base de datos
 
             try
@@ -228,10 +266,10 @@ namespace DataLayer
                     UsuarioModel usuario = new UsuarioModel();
                     usuario.ID_Usuario = Convert.ToInt32(row["IDUsuario"]);
                     usuario.Usuario = Convert.ToString(row["Usuario"]);
-                    //usuario.Clave = Convert.ToString(row["Clave"]);
+                    usuario.Clave = "";
                     usuario.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
                     usuario.ID_Rol = Convert.ToInt32(row["IDRol"]);
-                    usuario.Imagen = row["Imagen"] == DBNull.Value ? null : (byte[])row["Imagen"];
+                    
 
                     listaUsuarios.Add(usuario);
                 }
@@ -734,6 +772,61 @@ namespace DataLayer
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public static void CREAR_USUARIO(UsuarioModel u)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO usuarios (usuario, clave, IDEmpleado, IDRol) " +
+                                  "VALUES ('" + u.Usuario + "', '" + u.Clave + "', " + u.ID_Empleado + ", " + u.ID_Rol + ")";
+
+                // Asegúrate de abrir la conexión antes de ejecutar la sentencia
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public static void EDITAR_USUARIO(UsuarioModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append(" UPDATE usuarios ");
+                consulta.Append(" SET Usuario =  '" + c.Usuario + "', ");
+                consulta.Append("  Clave =  '" + c.Clave + "', ");
+                consulta.Append("  IDEmpleado =  '" + c.ID_Empleado + "', ");
+                consulta.Append("  IDRol =  '" + c.ID_Rol + "' ");
+                consulta.Append(" WHERE IDUsuario =  " + c.ID_Usuario);
+                operacion.EjecutarSetencia(consulta.ToString());
+
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        public static void ELIMINAR_USUARIO(int id)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM usuarios WHERE IDUsuario = @id";
+                operacion.Comando.Parameters.AddWithValue("@id", id);
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+        }
+
 
         public static void EDITAR_PRODUCTO(ProductoModel p)
         {
