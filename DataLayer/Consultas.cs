@@ -366,6 +366,21 @@ namespace DataLayer
             }
         }
 
+        public static void ELIMINAR_CLIENTE(Int32 id)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM clientes WHERE id_cliente = " + id;
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
 
 
         public static void ELIMINAR_OPCION_ROL(Int32 rol, Int32 opc)

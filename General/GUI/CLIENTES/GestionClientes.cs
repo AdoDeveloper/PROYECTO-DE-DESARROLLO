@@ -73,5 +73,15 @@ namespace General.GUI.CLIENTES
             setClienteOnVenta?.Invoke(this, EventArgs.Empty, clienteSeleccionado);
             this.Close();
         }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                ClienteModel clienteSeleccionado = (ClienteModel)dtgClientes.CurrentRow.DataBoundItem;
+                Consultas.ELIMINAR_CLIENTE(clienteSeleccionado.Id_cliente);
+                CargarClientes();
+            }
+        }
     }
 }
