@@ -14,6 +14,10 @@ namespace General.GUI.GESTION_PROVEEDORES
 {
     public partial class GestionProveedor : Form
     {
+        public delegate void setProveedorOnCompraEventHandler(object sender, EventArgs e, ProveedorModel c);
+
+
+        public event setProveedorOnCompraEventHandler setProveedorOnCompra;
         public GestionProveedor()
         {
             InitializeComponent();
@@ -24,6 +28,15 @@ namespace General.GUI.GESTION_PROVEEDORES
         {
             // Aquí recargarás el DataGridView
             CargarProveedores();
+        }
+
+        public void isFormOpenOnVenta(bool open)
+        {
+            if (open)
+            {
+                btnSeleccionar.Visible = true;
+            }
+
         }
 
         public void CargarProveedores()
@@ -54,14 +67,13 @@ namespace General.GUI.GESTION_PROVEEDORES
             agregarEditar.ShowDialog();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                ProveedorModel clienteSeleccionado = (ProveedorModel)dtgProveedores.CurrentRow.DataBoundItem;
-                Consultas.ELIMINAR_PROVEEDOR(clienteSeleccionado.Id_proveedor);
-                CargarProveedores();
-            }
+            ProveedorModel clienteSeleccionado = (ProveedorModel)dtgProveedores.CurrentRow.DataBoundItem;
+            setProveedorOnCompra?.Invoke(this, EventArgs.Empty, clienteSeleccionado);
+            this.Close();
         }
     }
 }

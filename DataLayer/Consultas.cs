@@ -288,7 +288,7 @@ namespace DataLayer
         {
 
 
-            String Consulta = "select * from productos where LOWER(producto) like '%" + nombre + "%'";
+            String Consulta = "select id_producto, producto, precio, stock, descripcion from productos p where LOWER(producto) like '%" + nombre + "%'";
 
             DBOperacion operacion = new DBOperacion();
             List<ProductoModel> lts = new List<ProductoModel>();
@@ -308,7 +308,7 @@ namespace DataLayer
                         op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
                         op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
                         op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
-                        op.Image = (byte[])dt.Rows[i]["imagen"];
+                        //op.Image = (byte[])dt.Rows[i]["imagen"];
                         lts.Add(op);
                     }
 
@@ -621,7 +621,80 @@ namespace DataLayer
             }
         }
 
+        public static void CREAR_COMPRA(CompraModel compra)
+        {
+            try
+            {
+                // Insertando compra
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO compras(total, no_compra, id_proveedor) VALUES (@total, @nocompra, @proveedor)";
+                operacion.Comando.Parameters.AddWithValue("total", compra.Total);
+                operacion.Comando.Parameters.AddWithValue("nocompra", compra.No_compra);
+                operacion.Comando.Parameters.AddWithValue("proveedor", compra.Proveedor.Id_proveedor);
+                operacion.EjecutarSetencia(consulta);
 
+                // Obtenemos la compra creada
+                CompraModel newCompra = OBTENER_COMPRA_POR_No(compra.No_compra);
+
+                // Insertar los detalles
+                StringBuilder stringDetalles = new StringBuilder();
+                stringDetalles.Append("INSERT INTO detalles_compra(id_compra, id_producto, cantidad, precio, subtotal) VALUES ");
+
+                foreach (DetalleCompraModel detalle in compra.Detalles)
+                {
+                    stringDetalles.AppendFormat("({0}, {1}, {2}, {3}, {4}), ",
+                        newCompra.Id_compra, detalle.Id_producto, detalle.Cantidad, detalle.Precio, detalle.Subtotal);
+                }
+
+                // Remover la última coma y espacio
+                if (stringDetalles.Length > 0)
+                {
+                    stringDetalles.Remove(stringDetalles.Length - 2, 2); // Eliminar la última coma y espacio
+                }
+
+                string query = stringDetalles.ToString();
+                Console.WriteLine(query);
+
+                DBOperacion operacion2 = new DBOperacion();
+                operacion2.EjecutarSetencia(query);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al crear la compra", e);
+            }
+        }
+
+        public static CompraModel OBTENER_COMPRA_POR_No(string no_compra)
+        {
+            CompraModel compra = null;
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "SELECT id_compra, total, no_compra, id_proveedor FROM compras WHERE no_compra = @nocompra";
+                operacion.Comando.Parameters.AddWithValue("@nocompra", no_compra);
+                DataTable dt = operacion.Consultar(consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+                    compra = new CompraModel
+                    {
+                        Id_compra = Convert.ToInt32(row["id_compra"]),
+                        Total = Convert.ToDouble(row["total"]),
+                        No_compra = Convert.ToString(row["no_compra"]),
+                        Proveedor = new ProveedorModel
+                        {
+                            Id_proveedor = Convert.ToInt32(row["id_proveedor"])
+                        }
+                    };
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al obtener la compra por número", e);
+            }
+            return compra;
+        }
 
 
         public static void EDITAR_CLIENTE(ClienteModel c)
