@@ -771,5 +771,111 @@ namespace DataLayer
 
             return Resultado;
         }
+        public static List<EmpleadoModel> FILTRAR_EMPLEADOS(string filtro)
+        {
+            List<EmpleadoModel> listaEmpleadosFiltrados = new List<EmpleadoModel>();
+
+            string consulta = @"SELECT IDEmpleado, Nombres, Apellidos, DUI, Direccion, Telefono 
+                        FROM empleados 
+                        WHERE LOWER(Nombres) LIKE '%" + filtro.ToLower() + "%' OR LOWER(Apellidos) LIKE '%" + filtro.ToLower() + "%';";
+
+            DBOperacion operacion = new DBOperacion(); 
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    EmpleadoModel empleado = new EmpleadoModel();
+                    empleado.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
+                    empleado.Nombres = Convert.ToString(row["Nombres"]);
+                    empleado.Apellidos = Convert.ToString(row["Apellidos"]);
+                    empleado.DUI = Convert.ToString(row["DUI"]);
+                    empleado.Direccion = Convert.ToString(row["Direccion"]);
+                    empleado.Telefono = Convert.ToString(row["Telefono"]);
+
+                    listaEmpleadosFiltrados.Add(empleado);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return listaEmpleadosFiltrados;
+        }
+        public static List<ClienteModel> FILTRAR_CLIENTES(string filtro)
+        {
+            List<ClienteModel> clientesFiltrados = new List<ClienteModel>();
+
+            string consulta = @"SELECT * FROM clientes 
+                        WHERE LOWER(cliente) LIKE '%" + filtro.ToLower() + @"%' 
+                        OR LOWER(telefono) LIKE '%" + filtro.ToLower() + @"%' 
+                        OR LOWER(correo) LIKE '%" + filtro.ToLower() + @"%' 
+                        OR LOWER(dui) LIKE '%" + filtro.ToLower() + @"%';";
+
+            DBOperacion operacion = new DBOperacion(); 
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    ClienteModel cliente = new ClienteModel();
+                    cliente.Id_cliente = Convert.ToInt32(row["id_cliente"]);
+                    cliente.Cliente = Convert.ToString(row["cliente"]);
+                    cliente.Telefono = Convert.ToString(row["telefono"]);
+                    cliente.Correo = Convert.ToString(row["correo"]);
+                    cliente.Dui = Convert.ToString(row["dui"]);
+
+                    clientesFiltrados.Add(cliente);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return clientesFiltrados;
+        }
+
+        public static List<ProductoModel> FILTRAR_PRODUCTOS(string filtro)
+        {
+            List<ProductoModel> productosFiltrados = new List<ProductoModel>();
+
+            // Consulta SQL para filtrar productos por nombre
+            string consulta = "SELECT * FROM productos WHERE LOWER(producto) LIKE '%" + filtro + "%'";
+
+            DBOperacion operacion = new DBOperacion();
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    ProductoModel producto = new ProductoModel();
+                    producto.Id_producto = Convert.ToInt32(row["id_producto"]);
+                    producto.Producto = Convert.ToString(row["producto"]);
+                    producto.Precio = Convert.ToDouble(row["precio"]);
+                    producto.Stock = Convert.ToInt32(row["stock"]);
+                    producto.Descripcion = Convert.ToString(row["descripcion"]);
+                    producto.Image = (byte[])row["imagen"];
+
+                    productosFiltrados.Add(producto);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return productosFiltrados;
+        }
+
+
+
     }
 }

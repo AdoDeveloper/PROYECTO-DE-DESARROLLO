@@ -18,14 +18,43 @@ namespace General.GUI.GESTION_EMPLEADOS
         {
             InitializeComponent();
             CargarEmpleados();
-        }
+            
 
+        }
+        public int ContarRegistros()
+        {
+            return dtgEmpleados.Rows.Count;
+        }
         public void CargarEmpleados()
         {
             List<EmpleadoModel> productoModels = Consultas.OBTENER_EMPLEADOS();
             dtgEmpleados.DataSource = productoModels;
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
 
         }
+
+        private void FiltrarEmpleados(string filtro)
+        {
+            try
+            {
+                List<EmpleadoModel> empleadosFiltrados = Consultas.FILTRAR_EMPLEADOS(filtro);
+                dtgEmpleados.DataSource = empleadosFiltrados;
+                int totalRegistros = ContarRegistros();
+                lblContador.Text = $": {totalRegistros}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error al filtrar los datos: {ex.Message}");
+            }
+        }
+
+        private void txbFiltro_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txbFiltro.Text.Trim();
+            FiltrarEmpleados(filtro.ToLower());
+        }
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -33,8 +62,10 @@ namespace General.GUI.GESTION_EMPLEADOS
             f.setEditar(false);
             f.ShowDialog();
             CargarEmpleados();
+           
         }
-
+      
+     
         private void btnEditar_Click(object sender, EventArgs e)
         {
             AgregarEditar f = new AgregarEditar();
@@ -63,5 +94,7 @@ namespace General.GUI.GESTION_EMPLEADOS
                 MessageBox.Show("Hubo un error al eliminar el empleado");
             }
         }
+
+
     }
 }

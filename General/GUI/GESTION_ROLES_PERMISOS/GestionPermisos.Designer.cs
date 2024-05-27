@@ -50,9 +50,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(478, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(717, 45);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 246);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -65,11 +66,13 @@
             this.dtgAsignados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgAsignados.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgAsignados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAsignados.Location = new System.Drawing.Point(478, 257);
+            this.dtgAsignados.Location = new System.Drawing.Point(717, 395);
+            this.dtgAsignados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgAsignados.Name = "dtgAsignados";
             this.dtgAsignados.ReadOnly = true;
+            this.dtgAsignados.RowHeadersWidth = 62;
             this.dtgAsignados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgAsignados.Size = new System.Drawing.Size(373, 186);
+            this.dtgAsignados.Size = new System.Drawing.Size(560, 286);
             this.dtgAsignados.TabIndex = 2;
             // 
             // dtgPermisos
@@ -78,21 +81,24 @@
             this.dtgPermisos.AllowUserToDeleteRows = false;
             this.dtgPermisos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPermisos.Location = new System.Drawing.Point(0, 43);
+            this.dtgPermisos.Location = new System.Drawing.Point(0, 66);
+            this.dtgPermisos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgPermisos.MultiSelect = false;
             this.dtgPermisos.Name = "dtgPermisos";
             this.dtgPermisos.ReadOnly = true;
+            this.dtgPermisos.RowHeadersWidth = 62;
             this.dtgPermisos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPermisos.Size = new System.Drawing.Size(438, 400);
+            this.dtgPermisos.Size = new System.Drawing.Size(657, 615);
             this.dtgPermisos.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(474, 226);
+            this.label1.Location = new System.Drawing.Point(711, 348);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 19);
+            this.label1.Size = new System.Drawing.Size(248, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "Permisos asignados";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -101,9 +107,10 @@
             // 
             this.rolLabel.AutoSize = true;
             this.rolLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rolLabel.Location = new System.Drawing.Point(474, 7);
+            this.rolLabel.Location = new System.Drawing.Point(711, 11);
+            this.rolLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rolLabel.Name = "rolLabel";
-            this.rolLabel.Size = new System.Drawing.Size(125, 19);
+            this.rolLabel.Size = new System.Drawing.Size(182, 29);
             this.rolLabel.TabIndex = 1;
             this.rolLabel.Text = "Administrador";
             this.rolLabel.Click += new System.EventHandler(this.label1_Click);
@@ -119,7 +126,8 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(863, 31);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1294, 34);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -128,7 +136,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(77, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(104, 29);
             this.toolStripButton1.Text = "Agregar";
             this.toolStripButton1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -137,44 +145,46 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 28);
+            this.button2.Size = new System.Drawing.Size(102, 29);
             this.button2.Text = "Eliminar";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // txbFiltro
             // 
             this.txbFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txbFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbFiltro.Name = "txbFiltro";
-            this.txbFiltro.Size = new System.Drawing.Size(68, 31);
+            this.txbFiltro.Size = new System.Drawing.Size(100, 34);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(37, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(80, 29);
             this.toolStripLabel1.Text = "Filtrar";
             // 
             // rollabel2
             // 
             this.rollabel2.AutoSize = true;
             this.rollabel2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rollabel2.Location = new System.Drawing.Point(663, 82);
+            this.rollabel2.Location = new System.Drawing.Point(994, 126);
+            this.rollabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rollabel2.Name = "rollabel2";
-            this.rollabel2.Size = new System.Drawing.Size(0, 19);
+            this.rollabel2.Size = new System.Drawing.Size(0, 29);
             this.rollabel2.TabIndex = 9;
             this.rollabel2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // GestionPermisos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 513);
+            this.ClientSize = new System.Drawing.Size(1294, 789);
             this.Controls.Add(this.rollabel2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label1);
@@ -182,6 +192,7 @@
             this.Controls.Add(this.dtgPermisos);
             this.Controls.Add(this.rolLabel);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GestionPermisos";
             this.Text = "Gestionar permisos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
