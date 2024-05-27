@@ -505,6 +505,23 @@ namespace DataLayer
             }
         }
 
+        public static void ELIMINAR_PROVEEDOR(int id)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM proveedores WHERE id_proveedor = @id";
+                operacion.Comando.Parameters.AddWithValue("@id", id);
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
         public static void EDITAR_PROVEEDOR(ProveedorModel c)
         {
             try

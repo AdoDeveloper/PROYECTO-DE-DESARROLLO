@@ -53,5 +53,15 @@ namespace General.GUI.GESTION_PROVEEDORES
             agregarEditar.UpdateDataGridView += FormNuevo_UpdateDataGridView;
             agregarEditar.ShowDialog();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                ProveedorModel clienteSeleccionado = (ProveedorModel)dtgProveedores.CurrentRow.DataBoundItem;
+                Consultas.ELIMINAR_PROVEEDOR(clienteSeleccionado.Id_proveedor);
+                CargarProveedores();
+            }
+        }
     }
 }
