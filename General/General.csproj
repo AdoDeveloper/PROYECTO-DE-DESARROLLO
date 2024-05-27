@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CLS\EmailService.cs" />
     <Compile Include="CLS\HashHelper.cs" />
     <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Roles.cs" />
