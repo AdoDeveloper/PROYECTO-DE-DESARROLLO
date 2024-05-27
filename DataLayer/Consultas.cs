@@ -451,6 +451,96 @@ namespace DataLayer
             }
         }
 
+        public static List<ProveedorModel> OBTENER_PROVEEDORES()
+        {
+            List<ProveedorModel> proveedores = new List<ProveedorModel>();
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "SELECT id_proveedor, proveedor, contacto, nit, direccion FROM proveedores";
+                DataTable dt = operacion.Consultar(consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        ProveedorModel proveedor = new ProveedorModel
+                        {
+                            Id_proveedor = Convert.ToInt32(row["id_proveedor"]),
+                            Proveedor = Convert.ToString(row["proveedor"]),
+                            Contacto = Convert.ToString(row["contacto"]),
+                            Nit = Convert.ToString(row["nit"]),
+                            Direccion = Convert.ToString(row["direccion"])
+                        };
+                        proveedores.Add(proveedor);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+            return proveedores;
+        }
+
+
+        public static void AGREGAR_PROVEEDOR(ProveedorModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "INSERT INTO proveedores(proveedor,contacto,nit,direccion) values (@a,@b,@c,@d)";
+                operacion.Comando.Parameters.AddWithValue("a", c.Proveedor);
+                operacion.Comando.Parameters.AddWithValue("b", c.Contacto);
+                operacion.Comando.Parameters.AddWithValue("c", c.Nit);
+                operacion.Comando.Parameters.AddWithValue("d", c.Direccion);
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void ELIMINAR_PROVEEDOR(int id)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM proveedores WHERE id_proveedor = @id";
+                operacion.Comando.Parameters.AddWithValue("@id", id);
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
+        public static void EDITAR_PROVEEDOR(ProveedorModel c)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "UPDATE proveedores SET proveedor = @a, contacto = @b, nit = @c, direccion = @d WHERE id_proveedor = @id";
+                operacion.Comando.Parameters.AddWithValue("a", c.Proveedor);
+                operacion.Comando.Parameters.AddWithValue("b", c.Contacto);
+                operacion.Comando.Parameters.AddWithValue("c", c.Nit);
+                operacion.Comando.Parameters.AddWithValue("d", c.Direccion);
+                operacion.Comando.Parameters.AddWithValue("id", c.Id_proveedor); // Assuming the model has an Id property to identify the record to update
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+            }
+        }
+
         public static FacturaModel OBTENER_FACTURA_POR_No(String NoFac)
         {
 
