@@ -58,7 +58,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 38);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -67,7 +67,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(104, 29);
+            this.toolStripButton1.Size = new System.Drawing.Size(104, 33);
             this.toolStripButton1.Text = "Agregar";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -76,7 +76,7 @@
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(85, 29);
+            this.btnEditar.Size = new System.Drawing.Size(85, 33);
             this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -85,20 +85,20 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(102, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(102, 33);
             this.btnEliminar.Text = "Eliminar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // txbFiltro
             // 
             this.txbFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txbFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbFiltro.Name = "txbFiltro";
-            this.txbFiltro.Size = new System.Drawing.Size(100, 34);
+            this.txbFiltro.Size = new System.Drawing.Size(100, 38);
             this.txbFiltro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbFiltro_TextChanged);
             // 
             // toolStripLabel1
@@ -106,7 +106,7 @@
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(80, 29);
+            this.toolStripLabel1.Size = new System.Drawing.Size(80, 33);
             this.toolStripLabel1.Text = "Filtrar";
             // 
             // dtgProductos
@@ -116,13 +116,13 @@
             this.dtgProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgProductos.Location = new System.Drawing.Point(0, 34);
+            this.dtgProductos.Location = new System.Drawing.Point(0, 38);
             this.dtgProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgProductos.MultiSelect = false;
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.ReadOnly = true;
             this.dtgProductos.RowHeadersWidth = 62;
-            this.dtgProductos.Size = new System.Drawing.Size(1200, 658);
+            this.dtgProductos.Size = new System.Drawing.Size(1200, 654);
             this.dtgProductos.TabIndex = 4;
             // 
             // statusStrip1

@@ -105,6 +105,7 @@
     <Compile Include="MODELOS\OpcionModel.cs" />
     <Compile Include="MODELOS\ProductoModel.cs" />
     <Compile Include="MODELOS\ProveedorModel.cs" />
+    <Compile Include="MODELOS\RolModel.cs" />
     <Compile Include="MODELOS\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

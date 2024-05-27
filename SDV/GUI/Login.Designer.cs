@@ -113,6 +113,7 @@
             this.txbClave.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbClave.Location = new System.Drawing.Point(125, 306);
             this.txbClave.Name = "txbClave";
+            this.txbClave.PasswordChar = '*';
             this.txbClave.Size = new System.Drawing.Size(288, 33);
             this.txbClave.TabIndex = 13;
             // 
