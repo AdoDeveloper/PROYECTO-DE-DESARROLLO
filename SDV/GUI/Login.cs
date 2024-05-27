@@ -34,7 +34,21 @@ namespace SDV.GUI
             txbClave.Text = "12345";
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+       
+
+      
+
+        private void bntCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblMensaje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEntrar_Click_1(object sender, EventArgs e)
         {
             DataLayer.DBOperacion oOperacion = new DataLayer.DBOperacion();
             DataTable dt = new DataTable();
@@ -68,9 +82,6 @@ namespace SDV.GUI
                 lblMensaje.Text = "Usuario o Clave incorrectos";
             }
 
-
         }
-
-       
     }
 }
