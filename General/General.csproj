@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CLS\EmailService.cs" />
     <Compile Include="CLS\HashHelper.cs" />
     <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Roles.cs" />
@@ -65,6 +66,12 @@
     <Compile Include="GUI\CLIENTES\GestionClientes.Designer.cs">
       <DependentUpon>GestionClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\COMPRAS\RealizarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\COMPRAS\RealizarCompra.Designer.cs">
+      <DependentUpon>RealizarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GESTION_EMPLEADOS\AgregarEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,18 @@
     </Compile>
     <Compile Include="GUI\GESTION_PRODUCTOS\AgregarEditar.Designer.cs">
       <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\AgregarEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\AgregarEditar.Designer.cs">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\GestionProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_PROVEEDORES\GestionProveedor.Designer.cs">
+      <DependentUpon>GestionProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.cs">
       <SubType>Form</SubType>
@@ -106,6 +125,12 @@
     </Compile>
     <Compile Include="GUI\GESTION_PRODUCTOS\GestionProductos.Designer.cs">
       <DependentUpon>GestionProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GESTION_USUARIOS\AddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GESTION_USUARIOS\AddEdit.Designer.cs">
+      <DependentUpon>AddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\VENTAS\RealizarVenta.cs">
       <SubType>Form</SubType>
@@ -145,6 +170,9 @@
     <EmbeddedResource Include="GUI\CLIENTES\GestionClientes.resx">
       <DependentUpon>GestionClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\COMPRAS\RealizarCompra.resx">
+      <DependentUpon>RealizarCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_EMPLEADOS\AgregarEditar.resx">
       <DependentUpon>AgregarEditar.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +185,12 @@
     <EmbeddedResource Include="GUI\GESTION_PRODUCTOS\GestionProductos.resx">
       <DependentUpon>GestionProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_PROVEEDORES\AgregarEditar.resx">
+      <DependentUpon>AgregarEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_PROVEEDORES\GestionProveedor.resx">
+      <DependentUpon>GestionProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\GestionPermisos.resx">
       <DependentUpon>GestionPermisos.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GESTION_ROLES_PERMISOS\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GESTION_USUARIOS\AddEdit.resx">
+      <DependentUpon>AddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VENTAS\RealizarVenta.resx">
       <DependentUpon>RealizarVenta.cs</DependentUpon>

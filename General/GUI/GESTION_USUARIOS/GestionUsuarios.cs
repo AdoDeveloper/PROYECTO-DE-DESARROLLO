@@ -20,46 +20,31 @@ namespace General.GUI.GESTION_USUARIOS
             InitializeComponent();
             CargarUsuarios();
         }
+        public int ContarRegistros()
+        {
+            return dtgUsuarios.Rows.Count;
+        }
 
+        private void FormNuevo_UpdateDataGridView(object sender, EventArgs e)
+        {
+            // Aquí recargarás el DataGridView
+            CargarUsuarios();
+        }
         public void CargarUsuarios()
         {
             try
             {
                 List<UsuarioModel> usuarioModels = Consultas.OBTENER_USUARIOS();
                 dtgUsuarios.DataSource = usuarioModels;
-
-                // Configurar la columna Imagen como tipo de celda de imagen
-                DataGridViewImageColumn imgColumn = new DataGridViewImageColumn();
-                imgColumn.Name = "Imagen";
-                imgColumn.HeaderText = "Imagen";
-                imgColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
-                dtgUsuarios.Columns.Add(imgColumn);
-
-                // Ocultar la columna de byte[] y vincular la imagen o el texto a la columna de imagen
-                foreach (DataGridViewRow row in dtgUsuarios.Rows)
-                {
-                    if (row.Cells["Imagen"].Value != DBNull.Value)
-                    {
-                        byte[] imgBytes = (byte[])row.Cells["Imagen"].Value;
-                        row.Cells["Imagen"].Value = byteArrayToImage(imgBytes);
-                    }
-                    else
-                    {
-                        // Si la imagen es null, mostrar el texto "Sin imagen"
-                        row.Cells["Imagen"].Value = "Sin imagen";
-                    }
-                }
-
-                // Ocultar la columna de bytes de imagen original
-                dtgUsuarios.Columns["Imagen"].Visible = false;
-                dtgUsuarios.Columns["Clave"].Visible = false;
+                
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            
 
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
         }
         // Método para convertir los bytes de imagen en un objeto Image
 public Image byteArrayToImage(byte[] byteArrayIn)
@@ -78,10 +63,43 @@ public Image byteArrayToImage(byte[] byteArrayIn)
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-           // AgregarEditar f = new AgregarEditar();
-            //f.setEditar(false);
-            //f.ShowDialog();
+            AddEdit f = new AddEdit();
+            f.UpdateDataGridView += FormNuevo_UpdateDataGridView;
+            f.ShowDialog(); 
             CargarUsuarios();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            UsuarioModel usuario = (UsuarioModel)dtgUsuarios.CurrentRow.DataBoundItem;
+            AddEdit f = new AddEdit();
+            f.UpdateDataGridView += FormNuevo_UpdateDataGridView;
+            f.setUsuario(usuario);
+            f.isEditForm(true);
+            f.ShowDialog();
+            CargarUsuarios();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    
+                    int id = Convert.ToInt32(dtgUsuarios.CurrentRow.Cells["ID_Usuario"].Value.ToString());
+                    Consultas.ELIMINAR_USUARIO(id);
+                    MessageBox.Show("Registro eliminado");
+                    
+                    
+                    CargarUsuarios();
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
     }
 }

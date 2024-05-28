@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace General.GUI.VENTAS
 {
-    public partial class RealizarVenta : Form
+    public partial class RealizarCompra : Form
     {
         ClienteModel cliente = new ClienteModel();
 
@@ -22,7 +22,7 @@ namespace General.GUI.VENTAS
 
         private BindingList<ProductoModel> ltsSeleccionados = new BindingList<ProductoModel>();
 
-        public RealizarVenta()
+        public RealizarCompra()
         {
             InitializeComponent();
             confDataGridViewProductos();
@@ -271,6 +271,7 @@ namespace General.GUI.VENTAS
 
                 Consultas.CREAR_FACTURA(fact);
                 Consultas.GUARDAR_MOVIMIENTO(mov);
+                EmailService.EnviarFacturaPorCorreo(fact, fact.Cliente.Correo);
                 MessageBox.Show("Se ha registrado la venta exitosamente");
                 LimpiarFormulario();
             }

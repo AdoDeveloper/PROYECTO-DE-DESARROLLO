@@ -33,6 +33,44 @@ namespace DataLayer
             return Resultado;
         }
 
+
+        public static List<RolModel> OBTENER_ROLES()
+        {
+            List<RolModel> lts = new List<RolModel>();
+
+            String Consulta = @"SELECT IDRol, Rol FROM roles ORDER BY Rol ASC;";
+            DBOperacion operacion = new DBOperacion();
+
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = operacion.Consultar(Consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+
+                        RolModel op = new RolModel();
+                        op.IdRol = Convert.ToInt32(dt.Rows[i]["IDRol"]);
+                        op.Rol = Convert.ToString(dt.Rows[i]["Rol"]);
+
+
+                        lts.Add(op);
+                    }
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return lts;
+        }
+
         public static List<OpcionModel> OBTENER_TODAS_LAS_OPCIONES()
         {
             List<OpcionModel> lts = new List<OpcionModel>(); 
@@ -216,7 +254,7 @@ namespace DataLayer
         {
             List<UsuarioModel> listaUsuarios = new List<UsuarioModel>();
 
-            string consulta = "SELECT IDUsuario, Usuario, IDEmpleado, IDRol, Imagen FROM usuarios;";
+            string consulta = "SELECT IDUsuario, Usuario, Clave , IDEmpleado, IDRol FROM usuarios;";
             DBOperacion operacion = new DBOperacion(); // Asegúrate de tener esta clase definida para operaciones en la base de datos
 
             try
@@ -228,10 +266,10 @@ namespace DataLayer
                     UsuarioModel usuario = new UsuarioModel();
                     usuario.ID_Usuario = Convert.ToInt32(row["IDUsuario"]);
                     usuario.Usuario = Convert.ToString(row["Usuario"]);
-                    //usuario.Clave = Convert.ToString(row["Clave"]);
+                    usuario.Clave = "";
                     usuario.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
                     usuario.ID_Rol = Convert.ToInt32(row["IDRol"]);
-                    usuario.Imagen = row["Imagen"] == DBNull.Value ? null : (byte[])row["Imagen"];
+                    
 
                     listaUsuarios.Add(usuario);
                 }
@@ -288,7 +326,7 @@ namespace DataLayer
         {
 
 
-            String Consulta = "select * from productos where LOWER(producto) like '%" + nombre + "%'";
+            String Consulta = "select id_producto, producto, precio, stock, descripcion from productos p where LOWER(producto) like '%" + nombre + "%'";
 
             DBOperacion operacion = new DBOperacion();
             List<ProductoModel> lts = new List<ProductoModel>();
@@ -308,7 +346,7 @@ namespace DataLayer
                         op.Precio = Convert.ToDouble(dt.Rows[i]["precio"]);
                         op.Stock = Convert.ToInt32(dt.Rows[i]["stock"]);
                         op.Descripcion = Convert.ToString(dt.Rows[i]["descripcion"]);
-                        op.Image = (byte[])dt.Rows[i]["imagen"];
+                        //op.Image = (byte[])dt.Rows[i]["imagen"];
                         lts.Add(op);
                     }
 
@@ -366,6 +404,21 @@ namespace DataLayer
             }
         }
 
+        public static void ELIMINAR_CLIENTE(Int32 id)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM clientes WHERE id_cliente = " + id;
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
 
 
         public static void ELIMINAR_OPCION_ROL(Int32 rol, Int32 opc)
@@ -433,6 +486,96 @@ namespace DataLayer
             catch (Exception e)
             {
 
+            }
+        }
+
+        public static List<ProveedorModel> OBTENER_PROVEEDORES()
+        {
+            List<ProveedorModel> proveedores = new List<ProveedorModel>();
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "SELECT id_proveedor, proveedor, contacto, nit, direccion FROM proveedores";
+                DataTable dt = operacion.Consultar(consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        ProveedorModel proveedor = new ProveedorModel
+                        {
+                            Id_proveedor = Convert.ToInt32(row["id_proveedor"]),
+                            Proveedor = Convert.ToString(row["proveedor"]),
+                            Contacto = Convert.ToString(row["contacto"]),
+                            Nit = Convert.ToString(row["nit"]),
+                            Direccion = Convert.ToString(row["direccion"])
+                        };
+                        proveedores.Add(proveedor);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+            return proveedores;
+        }
+
+
+        public static void AGREGAR_PROVEEDOR(ProveedorModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "INSERT INTO proveedores(proveedor,contacto,nit,direccion) values (@a,@b,@c,@d)";
+                operacion.Comando.Parameters.AddWithValue("a", c.Proveedor);
+                operacion.Comando.Parameters.AddWithValue("b", c.Contacto);
+                operacion.Comando.Parameters.AddWithValue("c", c.Nit);
+                operacion.Comando.Parameters.AddWithValue("d", c.Direccion);
+                operacion.EjecutarSetencia(consulta);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public static void ELIMINAR_PROVEEDOR(int id)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM proveedores WHERE id_proveedor = @id";
+                operacion.Comando.Parameters.AddWithValue("@id", id);
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
+        public static void EDITAR_PROVEEDOR(ProveedorModel c)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "UPDATE proveedores SET proveedor = @a, contacto = @b, nit = @c, direccion = @d WHERE id_proveedor = @id";
+                operacion.Comando.Parameters.AddWithValue("a", c.Proveedor);
+                operacion.Comando.Parameters.AddWithValue("b", c.Contacto);
+                operacion.Comando.Parameters.AddWithValue("c", c.Nit);
+                operacion.Comando.Parameters.AddWithValue("d", c.Direccion);
+                operacion.Comando.Parameters.AddWithValue("id", c.Id_proveedor); // Assuming the model has an Id property to identify the record to update
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
             }
         }
 
@@ -569,7 +712,80 @@ namespace DataLayer
                 Console.WriteLine("Error al actualizar el stock del producto: " + e.Message);
             }
         }
+        public static void CREAR_COMPRA(CompraModel compra)
+        {
+            try
+            {
+                // Insertando compra
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO compras(total, no_compra, id_proveedor) VALUES (@total, @nocompra, @proveedor)";
+                operacion.Comando.Parameters.AddWithValue("total", compra.Total);
+                operacion.Comando.Parameters.AddWithValue("nocompra", compra.No_compra);
+                operacion.Comando.Parameters.AddWithValue("proveedor", compra.Proveedor.Id_proveedor);
+                operacion.EjecutarSetencia(consulta);
 
+                // Obtenemos la compra creada
+                CompraModel newCompra = OBTENER_COMPRA_POR_No(compra.No_compra);
+
+                // Insertar los detalles
+                StringBuilder stringDetalles = new StringBuilder();
+                stringDetalles.Append("INSERT INTO detalles_compra(id_compra, id_producto, cantidad, precio, subtotal) VALUES ");
+
+                foreach (DetalleCompraModel detalle in compra.Detalles)
+                {
+                    stringDetalles.AppendFormat("({0}, {1}, {2}, {3}, {4}), ",
+                        newCompra.Id_compra, detalle.Id_producto, detalle.Cantidad, detalle.Precio, detalle.Subtotal);
+                }
+
+                // Remover la última coma y espacio
+                if (stringDetalles.Length > 0)
+                {
+                    stringDetalles.Remove(stringDetalles.Length - 2, 2); // Eliminar la última coma y espacio
+                }
+
+                string query = stringDetalles.ToString();
+                Console.WriteLine(query);
+
+                DBOperacion operacion2 = new DBOperacion();
+                operacion2.EjecutarSetencia(query);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al crear la compra", e);
+            }
+        }
+
+        public static CompraModel OBTENER_COMPRA_POR_No(string no_compra)
+        {
+            CompraModel compra = null;
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "SELECT id_compra, total, no_compra, id_proveedor FROM compras WHERE no_compra = @nocompra";
+                operacion.Comando.Parameters.AddWithValue("@nocompra", no_compra);
+                DataTable dt = operacion.Consultar(consulta);
+
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+                    compra = new CompraModel
+                    {
+                        Id_compra = Convert.ToInt32(row["id_compra"]),
+                        Total = Convert.ToDouble(row["total"]),
+                        No_compra = Convert.ToString(row["no_compra"]),
+                        Proveedor = new ProveedorModel
+                        {
+                            Id_proveedor = Convert.ToInt32(row["id_proveedor"])
+                        }
+                    };
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al obtener la compra por número", e);
+            }
+            return compra;
+        }
 
 
         public static void GUARDAR_MOVIMIENTO(MovimientoModel mov)
@@ -626,6 +842,61 @@ namespace DataLayer
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public static void CREAR_USUARIO(UsuarioModel u)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                string consulta = "INSERT INTO usuarios (usuario, clave, IDEmpleado, IDRol) " +
+                                  "VALUES ('" + u.Usuario + "', '" + u.Clave + "', " + u.ID_Empleado + ", " + u.ID_Rol + ")";
+
+                // Asegúrate de abrir la conexión antes de ejecutar la sentencia
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public static void EDITAR_USUARIO(UsuarioModel c)
+        {
+            try
+            {
+
+                DBOperacion operacion = new DBOperacion();
+                StringBuilder consulta = new StringBuilder();
+                consulta.Append(" UPDATE usuarios ");
+                consulta.Append(" SET Usuario =  '" + c.Usuario + "', ");
+                consulta.Append("  Clave =  '" + c.Clave + "', ");
+                consulta.Append("  IDEmpleado =  '" + c.ID_Empleado + "', ");
+                consulta.Append("  IDRol =  '" + c.ID_Rol + "' ");
+                consulta.Append(" WHERE IDUsuario =  " + c.ID_Usuario);
+                operacion.EjecutarSetencia(consulta.ToString());
+
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        public static void ELIMINAR_USUARIO(int id)
+        {
+            try
+            {
+                DBOperacion operacion = new DBOperacion();
+                String consulta = "DELETE FROM usuarios WHERE IDUsuario = @id";
+                operacion.Comando.Parameters.AddWithValue("@id", id);
+                operacion.EjecutarSetencia(consulta);
+            }
+            catch (Exception e)
+            {
+                // Handle the exception (log it, rethrow it, or manage it as appropriate)
+                Console.WriteLine(e.Message);
+            }
+        }
+
 
         public static void EDITAR_PRODUCTO(ProductoModel p)
         {
@@ -747,5 +1018,111 @@ namespace DataLayer
 
             return Resultado;
         }
+        public static List<EmpleadoModel> FILTRAR_EMPLEADOS(string filtro)
+        {
+            List<EmpleadoModel> listaEmpleadosFiltrados = new List<EmpleadoModel>();
+
+            string consulta = @"SELECT IDEmpleado, Nombres, Apellidos, DUI, Direccion, Telefono 
+                        FROM empleados 
+                        WHERE LOWER(Nombres) LIKE '%" + filtro.ToLower() + "%' OR LOWER(Apellidos) LIKE '%" + filtro.ToLower() + "%';";
+
+            DBOperacion operacion = new DBOperacion(); 
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    EmpleadoModel empleado = new EmpleadoModel();
+                    empleado.ID_Empleado = Convert.ToInt32(row["IDEmpleado"]);
+                    empleado.Nombres = Convert.ToString(row["Nombres"]);
+                    empleado.Apellidos = Convert.ToString(row["Apellidos"]);
+                    empleado.DUI = Convert.ToString(row["DUI"]);
+                    empleado.Direccion = Convert.ToString(row["Direccion"]);
+                    empleado.Telefono = Convert.ToString(row["Telefono"]);
+
+                    listaEmpleadosFiltrados.Add(empleado);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return listaEmpleadosFiltrados;
+        }
+        public static List<ClienteModel> FILTRAR_CLIENTES(string filtro)
+        {
+            List<ClienteModel> clientesFiltrados = new List<ClienteModel>();
+
+            string consulta = @"SELECT * FROM clientes 
+                        WHERE LOWER(cliente) LIKE '%" + filtro.ToLower() + @"%' 
+                        OR LOWER(telefono) LIKE '%" + filtro.ToLower() + @"%' 
+                        OR LOWER(correo) LIKE '%" + filtro.ToLower() + @"%' 
+                        OR LOWER(dui) LIKE '%" + filtro.ToLower() + @"%';";
+
+            DBOperacion operacion = new DBOperacion(); 
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    ClienteModel cliente = new ClienteModel();
+                    cliente.Id_cliente = Convert.ToInt32(row["id_cliente"]);
+                    cliente.Cliente = Convert.ToString(row["cliente"]);
+                    cliente.Telefono = Convert.ToString(row["telefono"]);
+                    cliente.Correo = Convert.ToString(row["correo"]);
+                    cliente.Dui = Convert.ToString(row["dui"]);
+
+                    clientesFiltrados.Add(cliente);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return clientesFiltrados;
+        }
+
+        public static List<ProductoModel> FILTRAR_PRODUCTOS(string filtro)
+        {
+            List<ProductoModel> productosFiltrados = new List<ProductoModel>();
+
+            // Consulta SQL para filtrar productos por nombre
+            string consulta = "SELECT * FROM productos WHERE LOWER(producto) LIKE '%" + filtro + "%'";
+
+            DBOperacion operacion = new DBOperacion();
+
+            try
+            {
+                DataTable dt = operacion.Consultar(consulta);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    ProductoModel producto = new ProductoModel();
+                    producto.Id_producto = Convert.ToInt32(row["id_producto"]);
+                    producto.Producto = Convert.ToString(row["producto"]);
+                    producto.Precio = Convert.ToDouble(row["precio"]);
+                    producto.Stock = Convert.ToInt32(row["stock"]);
+                    producto.Descripcion = Convert.ToString(row["descripcion"]);
+                    producto.Image = (byte[])row["imagen"];
+
+                    productosFiltrados.Add(producto);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return productosFiltrados;
+        }
+
+
+
     }
 }

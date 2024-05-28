@@ -42,6 +42,10 @@ namespace SDV.CLS
                     return Resource1.vent;
                 case 36:
                     return Resource1.about;
+                case 38:
+                    return Resource1.realizar_compra;
+                case 37:
+                    return Resource1.compras;
                 default:
                     return null;
             }

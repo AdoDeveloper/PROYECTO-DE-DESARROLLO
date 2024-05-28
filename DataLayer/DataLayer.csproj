@@ -97,12 +97,16 @@
     <Compile Include="DBConexion.cs" />
     <Compile Include="DBOperacion.cs" />
     <Compile Include="MODELOS\ClienteModel.cs" />
+    <Compile Include="MODELOS\CompraModel.cs" />
+    <Compile Include="MODELOS\DetalleCompra.cs" />
     <Compile Include="MODELOS\DetalleFacturaModel.cs" />
     <Compile Include="MODELOS\FacturaModel.cs" />
     <Compile Include="MODELOS\EmpleadoModel.cs" />
     <Compile Include="MODELOS\MovimientoModel.cs" />
     <Compile Include="MODELOS\OpcionModel.cs" />
     <Compile Include="MODELOS\ProductoModel.cs" />
+    <Compile Include="MODELOS\ProveedorModel.cs" />
+    <Compile Include="MODELOS\RolModel.cs" />
     <Compile Include="MODELOS\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

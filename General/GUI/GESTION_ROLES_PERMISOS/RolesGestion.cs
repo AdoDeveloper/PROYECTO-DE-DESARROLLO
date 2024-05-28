@@ -15,6 +15,18 @@ namespace General.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        public RolesGestion()
+        {
+
+            InitializeComponent();
+            Cargar();
+            txbFiltro.TextChanged += (s, e) => FiltrarLocalmente();
+
+        }
+        public int ContarRegistros()
+        {
+            return dataGridView1.Rows.Count;
+        }
         private void Cargar()
         {
             try
@@ -27,35 +39,24 @@ namespace General.GUI
             {
               
             }
+            int totalRegistros = ContarRegistros();
+            lblContador.Text = $": {totalRegistros}";
         }
-
+  
         private void FiltrarLocalmente()
         {
             try
             {
-                if(txbFiltro.Text.Trim().Length <= 0) {
-                    _DATOS.RemoveFilter();
-                }
-                else
-                {
-                    _DATOS.Filter = "Rol like '%" + txbFiltro.Text + "%'";
-                }
+                string filtro = txbFiltro.Text.Trim();
+                _DATOS.Filter = string.IsNullOrEmpty(filtro) ? "" : $"Rol LIKE '%{filtro}%'";
+
                 dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.DataSource = _DATOS;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                
+                MessageBox.Show($"Ocurrió un error al filtrar los datos: {ex.Message}");
             }
-          
-        }
-        public RolesGestion()
-        {
-           
-            InitializeComponent();
-            Cargar();
-
         }
 
         private void RolesGestion_Load(object sender, EventArgs e)
@@ -114,6 +115,12 @@ namespace General.GUI
             }
         }
 
+        private void FormNuevo_UpdateDataGridView(object sender, EventArgs e)
+        {
+            // Aquí recargarás el DataGridView
+            Cargar();
+        }
+
         private void btnPermisos_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow.Selected)
@@ -128,6 +135,21 @@ namespace General.GUI
             {
                 MessageBox.Show("Debe seleccionar un item");
             }
+
+        }
+
+
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            RolesEdicion oRol = new RolesEdicion();
+            oRol.UpdateDataGridView += FormNuevo_UpdateDataGridView;
+            oRol.isEditForm(false);
+            oRol.ShowDialog();
+        }
+
+        private void RolesGestion_Load_1(object sender, EventArgs e)
+        {
 
         }
     }
