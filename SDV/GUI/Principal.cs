@@ -129,9 +129,9 @@ namespace SDV.GUI
                     reporte.ShowDialog();
                     break;
                 case 36:
-
                     General.GUI.ACERCADE.About about = new General.GUI.ACERCADE.About();
                     about.ShowDialog();
+                    break;
                 case 16:
 
                     General.GUI.GESTION_PROVEEDORES.GestionProveedor gp = new General.GUI.GESTION_PROVEEDORES.GestionProveedor();
